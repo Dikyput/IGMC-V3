@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -16,21 +15,24 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+    protected $primaryKey = 'id_discord';
+
     protected $fillable = [
-        'id',
+        'id_discord',
         'username',
-        'discriminator',
         'email',
-        'avatar',
-        'verified',
-        'locale',
-        'mfa_enabled',
-        'refresh_token'
+        'test',
     ];
+
+    // public function iddiscord2()
+    // {
+    //     return $this->belongsTo(UserDiscord::class, 'id_discord');
+    // }
 
     /**
      * Indicates if the model's ID is auto-incrementing.
-     * 
+     *
      * @var boolean
      */
     public $incrementing = false;
@@ -41,8 +43,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'refresh_token',
-        'remember_token'
+        'remember_token',
     ];
 
     /**

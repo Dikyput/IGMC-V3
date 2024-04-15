@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -11,8 +12,13 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
-    return view('welcome');
-}) -> name('index');
+    return view('landingpage.dashboard');
+})->name('landingpage');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('dashboard', function () {return view('dashboard.home');})->name('dashboard');
+    Route::get('keluar', [DashboardController::class, 'keluar'])->name('keluar');
+});

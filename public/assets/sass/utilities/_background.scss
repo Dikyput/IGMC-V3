@@ -1,0 +1,132 @@
+@each $bgcolorMap, $value in $bgcolorMap {
+    .bg-#{$bgcolorMap} {
+        background-color: #{$value} !important;
+    }
+}
+
+.gr-bg1 {
+	background: linear-gradient(180deg, #0B0E13 0%, rgba(11, 14, 19, 0.94) 46.17%, #0B0E13 100%);
+}
+.gr-bg2 {
+    background-image: linear-gradient(100.62deg, rgba(249, 215, 175, 0.3) 0%, rgba(214, 202, 245, 0.3) 24.03%, rgba(198, 241, 255, 0.3) 45.73%, rgba(248, 242, 222, 0.3) 69.05%, rgba(212, 179, 253, 0.3) 100.44%);
+}
+.gr-bg3 {
+    // background-image: linear-gradient(110.59deg, rgba(205, 219, 253, 0.4) 0%, rgba(229, 233, 255, 0.7) 100%);
+    background-image: linear-gradient(110.59deg, rgba(236, 207, 254, 0.4) 0%, rgba(255, 221, 221, 0.5) 46.79%, rgba(247, 255, 229, 0.7) 100%);
+    backdrop-filter: blur(10px);
+}
+.gr-bg4 {
+    background-image: linear-gradient(105.44deg, rgba(255, 229, 133, 0.4) 0%, rgba(189, 255, 199, 0.4) 48.48%, rgba(223, 109, 223, 0.4) 100%);
+    backdrop-filter: blur(15px);
+}
+
+.background-image,
+[data-bg-src] {
+    @include background-content(no-repeat, cover, center center);
+}
+
+.bg-fluid {
+    @include background-content(no-repeat, 100% 100%, center center);
+}
+
+.bg-auto {
+    background-size: auto auto;
+}
+
+.bg-top-center {
+    background-size: auto;
+    background-position: top center;
+}
+
+.bg-repeat {
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+.bg-bottom-right {
+    background-size: auto;
+    background-position: bottom right;
+}
+.bg-top-right {
+    background-size: auto;
+    background-position: top right;
+}
+.bg-top-left {
+    background-size: auto;
+    background-position: top left;
+}
+.bg-attachment {
+    background-attachment: fixed;
+}
+.gradient-border {
+    --border-width: 1px;
+    --border-radius: 20px;
+    position: relative;
+    background: linear-gradient(to right, $theme-color, $theme-color2),
+    linear-gradient(to right, $theme-color, $theme-color2);
+    background-position: var(--border-radius) 0, var(--border-radius) 100%;
+    background-repeat: no-repeat;
+    background-size: calc(100% - var(--border-radius) - var(--border-radius))
+        var(--border-width);
+    &:after,
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: var(--border-radius);
+        top: 0;
+        bottom: 0;
+    }
+    &:before {
+        left: 0;
+        border: var(--border-width) solid $theme-color;
+        border-top-left-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
+        border-right-color: transparent;
+    }
+    &:after {
+        right: 0;
+        border: var(--border-width) solid $theme-color2;
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+        border-left-color: transparent;
+    }
+}
+.radient-border-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(89.77deg, #FBEC6B 0.44%, #FF1F58 18.3%, #FE63FC 38.04%, #0391FF 58.82%, #00F9F5 79.6%, #01FF8E 100.7%);
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 10px;
+        background: linear-gradient(89.53deg, #FBEC6B 0.88%, #FF1F58 18.66%, #FE63FC 38.31%, #0391FF 58.95%, #00F9F5 79.69%, #01FF8E 100.69%);
+        opacity: 0.5;
+        filter: blur(25px);
+    }
+}
+.radient-border-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(89.77deg, #FBEC6B 0.44%, #FF1F58 18.3%, #FE63FC 38.04%, #0391FF 58.82%, #00F9F5 79.6%, #01FF8E 100.7%);
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 10px;
+        background: linear-gradient(89.53deg, #FBEC6B 0.88%, #FF1F58 18.66%, #FE63FC 38.31%, #0391FF 58.95%, #00F9F5 79.69%, #01FF8E 100.69%);
+        opacity: 0.5;
+        filter: blur(25px);
+    }
+}
