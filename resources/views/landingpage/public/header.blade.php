@@ -83,7 +83,7 @@
                                                 </ul>
                                             </li>
                                             <li><a href="#">Players</a></li>
-                                            <li><a href="#">Players Details</a></li>
+                                            <li><a href="#">Players Detail</a></li>
                                             <li><a href="#">Ranking</a></li>
                                         </ul>
                                     </li>
