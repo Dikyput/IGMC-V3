@@ -17,7 +17,7 @@ class Userdiscord extends Migration
             $table->id('id_discord');
             $table->string('username');
             $table->string('avatar')->nullable();
-            $table->boolean('verified');
+            // $table->boolean('verified');
             $table->string('locale');
             $table->boolean('mfa_enabled');
             $table->string('refresh_token')->nullable();

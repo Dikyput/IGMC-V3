@@ -54,7 +54,7 @@ class DiscordController extends Controller
             [
                 'username' => $userData->username,
                 'avatar' => $userData->avatar,
-                'verified' => $userData->verified,
+                // 'verified' => $userData->verified,
                 'locale' => $userData->locale,
                 'mfa_enabled' => $userData->mfa_enabled,
                 'refresh_token' => $accessTokenData->refresh_token,
