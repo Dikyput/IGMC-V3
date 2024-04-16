@@ -34,4 +34,16 @@ class DashboardController extends Controller
         $datacrew = crew::orderBy('id')->distinct()->get();
         return view('landingpage.dashboard', ['datacrew' => $datacrew]);
     }
+    public function about()
+    {
+        return view('landingpage.about');
+    }
+    public function tournament()
+    {
+        return view('landingpage.tournament');
+    }
+    public function tournamentdetails()
+    {
+        return view('landingpage.tournamentdetails');
+    }
 }

@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', [DashboardController::class, 'show'])->name('show');
+Route::get('/about', [DashboardController::class, 'about'])->name('about');
+Route::get('/tournament', [DashboardController::class, 'tournament'])->name('tournament');
+Route::get('/tournamentdetails', [DashboardController::class, 'tournamentdetails'])->name('tournamentdetails');
 
 Route::get('/admin/login', [AdminController::class, 'adminlogin'])->name('adminlogin');
 Route::post('/admin/login', [AdminController::class, 'loginform'])->name('loginform');

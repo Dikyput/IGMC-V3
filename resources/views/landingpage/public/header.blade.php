@@ -59,13 +59,13 @@
                     <div class="col-auto">
                         <nav class="main-menu d-none d-lg-inline-block">
                             <ul>
-                                <li><a href="#">HOME</a></li>
-                                <li><a href="#">ABOUT US</a></li>
+                                <li><a href="{{ route('show') }}">HOME</a></li>
+                                <li><a href="{{ route('about') }}">ABOUT US</a></li>
                                 <li class="menu-item-has-children">
                                     <a href="#">TOURNAMENT</a>
                                     <ul class="sub-menu">
-                                        <li><a href="tournament.html">Tournament</a></li>
-                                        <li><a href="tournament-details.html">Tournament Details</a></li>
+                                        <li><a href="{{ route('tournament') }}">Tournament</a></li>
+                                        <li><a href="{{ route('tournamentdetails') }}">Tournament Details</a></li>
                                     </ul>
                                 </li>
                             </ul>

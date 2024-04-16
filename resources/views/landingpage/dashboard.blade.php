@@ -322,14 +322,13 @@
                     Every One Can Be Ontop & #IGMC</span>
                 <h1 class="hero-title">
                     <span class="title1 custom-anim-top wow animated" data-wow-duration="1.1s" data-wow-delay="0.3s"
-                        data-bg-src="assets/img/hero/hero-title-bg-shape1.svg">INDONESIA GTA V MASTER CHAMPIONSHIP</span>
+                        data-bg-src="assets/img/hero/hero-title-bg-shape1.svg">INDONESIA GTA V MASTER
+                        CHAMPIONSHIP</span>
                     <span class="title2 custom-anim-top wow animated" data-wow-duration="1.1s"
                         data-wow-delay="0.4s">IGMC</span>
                 </h1>
                 <div class="btn-group custom-anim-top wow animated" data-wow-duration="1.2s" data-wow-delay="0.7s">
-                    <a href="about.html" class="th-btn">EXPLORE MORE <i class="fa-solid fa-arrow-right ms-2"></i></a>
-                    <a href="tournament.html" class="th-btn style2">BROWSE GAMES <i
-                            class="fa-solid fa-arrow-right ms-2"></i></a>
+                    <div href="#" class="th-btn">PLAYER 0 / 100000</div>
                 </div>
 
                 {{-- <a href="https://discord.com/oauth2/authorize?client_id={{ env('DISCORD_CLIENT_ID') }}&redirect_uri={{ env('DISCORD_REDIRECT_URI') }}&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Flogin&scope=identify+guilds+guilds.join"
