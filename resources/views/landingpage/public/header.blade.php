@@ -68,6 +68,30 @@
                                         <li><a href="{{ route('tournamentdetails') }}">Tournament Details</a></li>
                                     </ul>
                                 </li>
+                                @auth
+                                    <li class="menu-item-has-children">
+                                        <a href="#">PAGES</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item-has-children">
+                                                <a href="#">Shop</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="#">Shop</a></li>
+                                                    <li><a href="#">Shop Details</a></li>
+                                                    <li><a href="#">Cart Page</a></li>
+                                                    <li><a href="#">Checkout</a></li>
+                                                    <li><a href="#">Wishlist</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Players</a></li>
+                                            <li><a href="#">Players Details</a></li>
+                                            <li><a href="#">Game</a></li>
+                                            <li><a href="#">Game Details</a></li>
+                                            <li><a href="#">Gallery</a></li>
+                                            <li><a href="#">Point Table</a></li>
+                                            <li><a href="#">Error Page</a></li>
+                                        </ul>
+                                    </li>
+                                @endauth
                             </ul>
                         </nav>
                         <div class="header-button d-flex d-lg-none">
@@ -86,7 +110,7 @@
                                 @auth
                                     <a href="/keluar" class="th-btn">
                                         LOGOUT</a>
-                                        <!-- https://discord.com/oauth2/authorize?client_id=1229900010385313842&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Flogin&scope=identify+guilds -->
+                                    <!-- https://discord.com/oauth2/authorize?client_id=1229900010385313842&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Flogin&scope=identify+guilds -->
                                 @else
                                     <!-- <a href="https://discord.com/oauth2/authorize?client_id={{ env('DISCORD_CLIENT_ID') }}&redirect_uri={{ env('DISCORD_REDIRECT_URI') }}&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Flogin&scope=identify+guilds" -->
                                     <a href="https://discord.com/oauth2/authorize?client_id={{ env('DISCORD_CLIENT_ID') }}&redirect_uri={{ env('DISCORD_REDIRECT_URI') }}&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Flogin&scope=identify+guilds"
