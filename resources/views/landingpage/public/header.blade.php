@@ -7,7 +7,7 @@
                     <div class="header-links">
                         <ul>
                             <li>
-                                <div class="header-notice">Welcome to our <a href="#">IGMC 2024</a>
+                                <div class="header-notice">Welcome to our <a href="#">IGMC</a>
                                 </div>
                             </li>
                             <li>
@@ -33,10 +33,10 @@
                 <div class="col-auto">
                     <div class="header-links">
                         <ul>
-                            <li><a href="https://www.facebook.com/">Facebook</a></li>
-                            <li><a href="https://www.twitter.com/">Twitter</a></li>
-                            <li><a href="https://www.pinterest.com/">Pinterest</a></li>
-                            <li><a href="https://www.instagram.com/">Instagram</a></li>
+                            <li><a href="https://discord.gg/GrgJSJB94Y">Discord</a></li>
+                            <li><a href="https://www.tiktok.com/@igmc2024">Tiktok</a></li>
+                            <li><a href="https://www.youtube.com/@IGMC2024">Youtube</a></li>
+                            <li><a href="https://www.instagram.com/igmc2024/">Instagram</a></li>
                         </ul>
                     </div>
                 </div>

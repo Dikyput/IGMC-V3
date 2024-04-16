@@ -319,7 +319,7 @@
         <div class="container">
             <div class="hero-style1 text-center">
                 <span class="sub-title custom-anim-top wow animated" data-wow-duration="1.2s" data-wow-delay="0.1s">#
-                    World Class eSports & Gaming Site</span>
+                    Every One Can Be Ontop & #IGMC</span>
                 <h1 class="hero-title">
                     <span class="title1 custom-anim-top wow animated" data-wow-duration="1.1s" data-wow-delay="0.3s"
                         data-bg-src="assets/img/hero/hero-title-bg-shape1.svg">INDONESIA GTA V MASTER CHAMPIONSHIP</span>
@@ -605,7 +605,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">GAMING SPANING</a></h3>
+                        <h3 class="marquee-title"><a href="service-details.html">THE BIGGEST TOURNAMENT</a></h3>
                     </div>
 
                     <!-- Single Item -->
@@ -613,7 +613,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">ACTION - PACKED</a></h3>
+                        <h3 class="marquee-title"><a href="service-details.html">IGMC - RGMC</a></h3>
                     </div>
 
                     <!-- Single Item -->
@@ -621,7 +621,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">MIND - BENDING</a></h3>
+                        <h3 class="marquee-title"><a href="service-details.html">IGSC - GGMC</a></h3>
                     </div>
 
                     <!-- Single Item -->
@@ -629,7 +629,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">COLLECTION OG GAMES</a></h3>
+                        <h3 class="marquee-title"><a href="service-details.html">INDONESIA GTA V MASTER CHAMPIONSHIP</a></h3>
                     </div>
 
                     <!-- Single Item -->
@@ -637,7 +637,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">GAMING SPANING</a></h3>
+                        <h3 class="marquee-title"><a href="service-details.html">THE BIGGEST TOURNAMENT</a></h3>
                     </div>
 
                     <!-- Single Item -->
@@ -645,7 +645,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">ACTION - PACKED</a></h3>
+                        <h3 class="marquee-title"><a href="service-details.html">IGMC - RGMC</a></h3>
                     </div>
 
                     <!-- Single Item -->
@@ -653,7 +653,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">MIND - BENDING</a></h3>
+                        <h3 class="marquee-title"><a href="service-details.html">IGSC - GGMC</a></h3>
                     </div>
 
                     <!-- Single Item -->
@@ -661,7 +661,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">COLLECTION OG GAMES</a></h3>
+                        <h3 class="marquee-title"><a href="service-details.html">INDONESIA GTA V MASTER CHAMPIONSHIP</a></h3>
                     </div>
 
                 </div>
@@ -1112,8 +1112,8 @@ Team Area
                 <div class="col-xl-6 col-lg-7 col-md-8">
                     <div class="title-area text-center custom-anim-top wow animated" data-wow-duration="1.5s"
                         data-wow-delay="0.2s">
-                        <span class="sub-title"># IGMC CREW</span>
-                        <h2 class="sec-title">INDONESIA GTA V MASTER CHAMPIONSHIP</h2>
+                        <span class="sub-title"># INDONESIA GTA V MASTER CHAMPIONSHIP</span>
+                        <h2 class="sec-title">PROPLAYER OF IGMC</h2>
                     </div>
                 </div>
             </div>
@@ -1184,13 +1184,12 @@ Cta Area
                     <div class="col-xl-5">
                         <div class="title-area mb-0 custom-anim-left wow animated" data-wow-duration="1.5s"
                             data-wow-delay="0.2s">
-                            <span class="sub-title"># World Best Gaming Site</span>
-                            <h2 class="sec-title">Join Bame Esports to Become Next <span
-                                    class="text-theme fw-medium">PRO Gamer Today !</span></h2>
-                            <p class="mt-30 mb-30">Esports and gaming facilities requires thoughtful consideration of
-                                various elements to create an environment that caters to the needs of gamers and
-                                enhances the overall gaming experience.</p>
-                            <a href="contact.html" class="th-btn">JOIN COMMUNITY <i
+                            <span class="sub-title"># World Best Community Site</span>
+                            <h2 class="sec-title">Join Indonesia GTA V Master Championship to Become Next <span
+                                    class="text-theme fw-medium">Master Championship Tournament Today !</span></h2>
+                            <p class="mt-30 mb-30">We are presenting something new to create a competitive platform
+                                that can be useful for all the teams involved.</p>
+                            <a href="https://discord.gg/GrgJSJB94Y" class="th-btn">JOIN COMMUNITY <i
                                     class="fa-solid fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>

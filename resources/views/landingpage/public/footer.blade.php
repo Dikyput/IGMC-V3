@@ -10,7 +10,7 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-6">
                     <p class="copyright-text bg-repeat" data-bg-src="{{ asset('assets/img/bg/jiji-bg.png') }}">
-                        <i class="fal fa-copyright"></i> Copyright 2024 <a href="index.html">Bame.</a> All
+                        <i class="fal fa-copyright"></i> Copyright 2024 <a href="index.html">igmc.</a> All
                         Rights
                         Reserved.
                     </p>
