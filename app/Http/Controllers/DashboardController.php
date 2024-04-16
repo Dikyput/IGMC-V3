@@ -20,7 +20,7 @@ class DashboardController extends Controller
     {
         Auth::logout();
         $request->session()->invalidate();
-        return redirect()->route("landingpage");
+        return redirect()->route("show");
     }
 
     /**

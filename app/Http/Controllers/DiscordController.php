@@ -25,8 +25,8 @@ class DiscordController extends Controller
 
     public function logindiscord(Request $request)
     {
-        if (Auth::check()) {return redirect()->route("landingpage");};
-        if ($request->missing("code") && $request->missing("access_token")) {return redirect()->route("landingpage");};
+        if (Auth::check()) {return redirect()->route("show");};
+        if ($request->missing("code") && $request->missing("access_token")) {return redirect()->route("show");};
 
         $this->tokenData["client_id"] = env("DISCORD_CLIENT_ID");
         $this->tokenData["client_secret"] = env("DISCORD_CLIENT_SECRET");
@@ -39,11 +39,11 @@ class DiscordController extends Controller
             $accessTokenData = $client->post($this->tokenURL, ["form_params" => $this->tokenData]);
             $accessTokenData = json_decode($accessTokenData->getBody());
         } catch (\GuzzleHttp\Exception\ClientException $error) {
-            return redirect()->route("landingpage");
+            return redirect()->route("show");
         };
 
         $userData = Http::withToken($accessTokenData->access_token)->get($this->apiURLBase);
-        if ($userData->clientError() || $userData->serverError()) {return redirect()->route("landingpage");};
+        if ($userData->clientError() || $userData->serverError()) {return redirect()->route("show");};
 
         $userData = json_decode($userData);
 
@@ -53,7 +53,6 @@ class DiscordController extends Controller
             ],
             [
                 'username' => $userData->username,
-                'email' => $userData->email,
                 'avatar' => $userData->avatar,
                 'verified' => $userData->verified,
                 'locale' => $userData->locale,
@@ -66,7 +65,6 @@ class DiscordController extends Controller
             [
                 'id_discord' => $userData->id,
                 'username' => $userData->username,
-                'email' => $userData->email,
             ]
         );
 
@@ -78,7 +76,7 @@ class DiscordController extends Controller
     {
         Auth::logout();
         $request->session()->invalidate();
-        return redirect()->route("landingpage");
+        return redirect()->route("show");
     }
 
 }

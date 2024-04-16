@@ -14,7 +14,6 @@ class UserDiscord extends Model implements Authenticatable
     protected $fillable = [
         'id_discord',
         'username',
-        'email',
         'avatar',
         'verified',
         'locale',

@@ -16,7 +16,6 @@ class Userdiscord extends Migration
         Schema::create('user_discords', function (Blueprint $table) {
             $table->id('id_discord');
             $table->string('username');
-            $table->string('email');
             $table->string('avatar')->nullable();
             $table->boolean('verified');
             $table->string('locale');
