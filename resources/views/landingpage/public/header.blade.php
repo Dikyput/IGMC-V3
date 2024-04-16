@@ -84,11 +84,7 @@
                                             </li>
                                             <li><a href="#">Players</a></li>
                                             <li><a href="#">Players Details</a></li>
-                                            <li><a href="#">Game</a></li>
-                                            <li><a href="#">Game Details</a></li>
-                                            <li><a href="#">Gallery</a></li>
-                                            <li><a href="#">Point Table</a></li>
-                                            <li><a href="#">Error Page</a></li>
+                                            <li><a href="#">Ranking</a></li>
                                         </ul>
                                     </li>
                                 @endauth
