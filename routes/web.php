@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', function () {
-    return view('landingpage.dashboard');
-})->name('landingpage');
+Route::get('/', [DashboardController::class, 'show'])->name('show');
+
+Route::get('/admin/login', [AdminController::class, 'adminlogin'])->name('adminlogin');
+Route::post('/admin/login', [AdminController::class, 'loginform'])->name('loginform');
+
+Route::middleware(['admin.auth'])->group(function () {
+    Route::get('/admin', [AdminController::class, 'dashboardadmin']);
+    Route::post('/keluaradmin', [AdminController::class, 'keluaradmin'])->name('keluaradmin');
+});
 
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', function () {return view('dashboard.home');})->name('dashboard');

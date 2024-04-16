@@ -17,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('login', [App\Http\Controllers\DiscordController::class, 'login'])
-    ->name('login');
+Route::get('login', [App\Http\Controllers\DiscordController::class, 'logindiscord'])
+    ->name('logindiscord');
 Route::get('logout', [App\Http\Controllers\DiscordController::class, 'logout'])
     ->name('logout');
-Route::get('ambiltes', [App\Http\Controllers\DashboardController::class, 'ambiltes'])
-    ->name('ambiltes');

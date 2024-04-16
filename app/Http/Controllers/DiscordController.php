@@ -23,7 +23,7 @@ class DiscordController extends Controller
         "scope" => "identifiy&email",
     ];
 
-    public function login(Request $request)
+    public function logindiscord(Request $request)
     {
         if (Auth::check()) {return redirect()->route("landingpage");};
         if ($request->missing("code") && $request->missing("access_token")) {return redirect()->route("landingpage");};

@@ -144,7 +144,8 @@
                 </div>
             </div>
         </div>
-    </div><!--==============================
+    </div>
+    <!--==============================
     Sidemenu
 ============================== -->
     <div class="sidemenu-wrapper sidemenu-info d-none d-lg-block ">
@@ -313,7 +314,7 @@
  Header Area
 ==============================-->
     @include('landingpage.public.header')
-    
+
     <div class="th-hero-wrapper hero-1" id="hero" data-bg-src="assets/img/hero/hero-bg1-1.png">
         <div class="container">
             <div class="hero-style1 text-center">
@@ -586,7 +587,12 @@
             </div>
         </div>
         <div class="slider-pagination"></div>
-    </div><!--==============================
+    </div>
+
+    <div class="header-sidebar-menu" id="navbar-collapse-toggle">
+        @include('landingpage.public.navbar')
+    </div>
+    <!--==============================
 Marquee Area
 ==============================-->
     <div class="marquee-area-1 bg-repeat  overflow-hidden" data-bg-src="assets/img/bg/jiji-bg.png">
@@ -662,78 +668,106 @@ Marquee Area
             </div>
         </div>
     </div>
-    <!--==============================
-About Area
-==============================-->
-    <div class="overflow-hidden space" id="about-sec">
-        <div class="about-bg-img shape-mockup" data-top="0" data-left="0">
-            <img src="assets/img/bg/about-bg1.png" alt="img">
-        </div>
+
+    <div class="point-table-area-1 space overflow-hidden" data-bg-src="assets/img/bg/tournament-table-sec1-bg.png"
+        id="rankteam-sec">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 mb-50 mb-xl-0">
-                    <div class="img-box1">
-                        <div class="img1 custom-anim-left wow animated" data-wow-duration="1.5s"
-                            data-wow-delay="0.2s">
-                            <img src="assets/img/normal/about1-1.png" alt="About">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
-                    <div class="about-wrap1">
-                        <div class="about-title-wrap mb-n1">
-                            <div class="about-title-thumb custom-anim-top wow animated" data-wow-duration="1.5s"
-                                data-wow-delay="0.1s">
-                                <img src="assets/img/normal/about1-2.png" alt="img">
-                            </div>
-                            <div class="title-area custom-anim-left wow animated" data-wow-duration="1.5s"
-                                data-wow-delay="0.1s">
-                                <span class="sub-title"># About Our Gaming Site</span>
-                                <h2 class="sec-title mb-0">Forging Legends in the Gaming Universe</h2>
-                            </div>
-                        </div>
-                        <div class="about-grid">
-                            <div class="icon custom-anim-top wow animated" data-wow-duration="1.5s"
-                                data-wow-delay="0.2s">
-                                <img src="assets/img/icon/about_feature_1.svg" alt="img">
-                            </div>
-                            <div class="about-grid-details custom-anim-left wow animated" data-wow-duration="1.5s"
-                                data-wow-delay="0.2s">
-                                <h3 class="about-grid_title h5">Over <span class="text-theme">1k+</span> Affiliate
-                                    Game Programs</h3>
-                                <p class="about-grid_text">Keep users informed about the gaming industry with news
-                                    articles on releases, updates, and events.</p>
-                            </div>
-                        </div>
-                        <div class="about-grid">
-                            <div class="icon custom-anim-top wow animated" data-wow-duration="1.5s"
-                                data-wow-delay="0.2s">
-                                <img src="assets/img/icon/about_feature_2.svg" alt="img">
-                            </div>
-                            <div class="about-grid-details custom-anim-left wow animated" data-wow-duration="1.5s"
-                                data-wow-delay="0.2s">
-                                <h3 class="about-grid_title h5">Great Tournaments</h3>
-                                <p class="about-grid_text">Display a calendar of upcoming tournaments with dates,
-                                    times, and game titles and provide live updates.</p>
-                            </div>
-                        </div>
-                        <div class="about-grid">
-                            <div class="icon custom-anim-top wow animated" data-wow-duration="1.5s"
-                                data-wow-delay="0.2s">
-                                <img src="assets/img/icon/about_feature_3.svg" alt="img">
-                            </div>
-                            <div class="about-grid-details custom-anim-left wow animated" data-wow-duration="1.5s"
-                                data-wow-delay="0.2s">
-                                <h3 class="about-grid_title h5">Get Online Supports</h3>
-                                <p class="about-grid_text">Create profiles for professional esports players, including
-                                    their bios, achievements, and current teams.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="title-area text-center custom-anim-top wow animated" data-wow-duration="1.5s"
+                data-wow-delay="0.2s">
+                <span class="sub-title style2"># Point Table</span>
+                <h2 class="sec-title">Game On, Power Up, Win Big <span class="text-theme">!</span></h2>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table tournament-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Team Squad</th>
+                            <th scope="col">Matches</th>
+                            <th scope="col">Matches</th>
+                            <th scope="col">Place PTS.</th>
+                            <th scope="col">Finishes</th>
+                            <th scope="col">Total PTS.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td><a href="tournament.html"><img src="assets/img/tournament/1-1.png" alt="img">PRO
+                                    Player</a></td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>21</td>
+                            <td>25</td>
+                            <td>47</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td><a href="tournament.html"><img src="assets/img/tournament/1-2.png" alt="img">The
+                                    Lion King</a></td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>29</td>
+                            <td>16</td>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td><a href="tournament.html"><img src="assets/img/tournament/1-3.png" alt="img">The
+                                    Assassin King</a></td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>25</td>
+                            <td>20</td>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td><a href="tournament.html"><img src="assets/img/tournament/1-4.png"
+                                        alt="img">Cyberpunk</a></td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>32</td>
+                            <td>12</td>
+                            <td>44</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td><a href="tournament.html"><img src="assets/img/tournament/1-5.png"
+                                        alt="img">Team Gorilla</a></td>
+                            <td>4</td>
+                            <td>1</td>
+                            <td>24</td>
+                            <td>19</td>
+                            <td>43</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td><a href="tournament.html"><img src="assets/img/tournament/1-6.png"
+                                        alt="img">King Of Badgamer</a></td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>17</td>
+                            <td>21</td>
+                            <td>38</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td><a href="tournament.html"><img src="assets/img/tournament/1-7.png"
+                                        alt="img">Team Ninja</a></td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>18</td>
+                            <td>18</td>
+                            <td>36</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
+
     <!--==============================
 Game Area
 ==============================-->
@@ -896,81 +930,7 @@ Game Area
     </section><!--==============================
 Feature Area
 ==============================-->
-    <section class="space">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="title-area text-center custom-anim-top wow animated" data-wow-duration="1.5s"
-                        data-wow-delay="0.2s">
-                        <span class="sub-title"># World Best Facilities Game </span>
-                        <h2 class="sec-title">Bame Comes With Many Facilities Included In Planet <span
-                                class="text-theme">!</span></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="feature-sec-wrap1" data-bg-src="assets/img/bg/feature-sec1-bg.png">
-                <div class="feature-card-wrap">
-                    <div class="feature-card-border">
-                        <div class="feature-card">
-                            <div class="feature-card-icon custom-anim-top wow animated" data-wow-duration="1.5s"
-                                data-wow-delay="0.2s">
-                                <span class="feature-card-icon-mask"
-                                    data-mask-src="assets/img/icon/feature_1.svg"></span>
-                                <img src="assets/img/icon/feature_1.svg" alt="img">
-                            </div>
-                            <div class="feature-card-details custom-anim-top wow animated" data-wow-duration="1.5s"
-                                data-wow-delay="0.2s">
-                                <h3 class="feature-card-title">Esports Lounge</h3>
-                                <p class="feature-card-text">Lounge areas with comfortable seating for relaxation
-                                    between gaming sessions. Provide snacks, drink, and vending machine for
-                                    refreshments.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-card-wrap">
-                    <div class="feature-card-border">
-                        <div class="feature-card">
-                            <div class="feature-card-icon custom-anim-top wow animated" data-wow-duration="1.5s"
-                                data-wow-delay="0.2s">
-                                <span class="feature-card-icon-mask"
-                                    data-mask-src="assets/img/icon/feature_2.svg"></span>
-                                <img src="assets/img/icon/feature_2.svg" alt="img">
-                            </div>
-                            <div class="feature-card-details custom-anim-top wow animated" data-wow-duration="1.5s"
-                                data-wow-delay="0.2s">
-                                <h3 class="feature-card-title">Training Facilities</h3>
-                                <p class="feature-card-text">Lounge areas with comfortable seating for relaxation
-                                    between gaming sessions. Provide snacks, drink, and vending machine for
-                                    refreshments.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="feature-card-wrap">
-                    <div class="feature-card-border">
-                        <div class="feature-card">
-                            <div class="feature-card-icon custom-anim-top wow animated" data-wow-duration="1.5s"
-                                data-wow-delay="0.2s">
-                                <span class="feature-card-icon-mask"
-                                    data-mask-src="assets/img/icon/feature_3.svg"></span>
-                                <img src="assets/img/icon/feature_3.svg" alt="img">
-                            </div>
-                            <div class="feature-card-details custom-anim-top wow animated" data-wow-duration="1.5s"
-                                data-wow-delay="0.2s">
-                                <h3 class="feature-card-title">Broadcasting Studio</h3>
-                                <p class="feature-card-text">Lounge areas with comfortable seating for relaxation
-                                    between gaming sessions. Provide snacks, drink, and vending machine for
-                                    refreshments.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> <!--==============================
-Tournament Area
-==============================-->
+
     <section class="space bg-top-center" data-bg-src="assets/img/bg/tournament-sec1-bg.png">
         <div class="container">
             <div class="row justify-content-between">
@@ -1152,8 +1112,8 @@ Team Area
                 <div class="col-xl-6 col-lg-7 col-md-8">
                     <div class="title-area text-center custom-anim-top wow animated" data-wow-duration="1.5s"
                         data-wow-delay="0.2s">
-                        <span class="sub-title"># Top World Class Gamer</span>
-                        <h2 class="sec-title">Let’s See Our Pro Players</h2>
+                        <span class="sub-title"># IGMC CREW</span>
+                        <h2 class="sec-title">INDONESIA GTA V MASTER CHAMPIONSHIP</h2>
                     </div>
                 </div>
             </div>
@@ -1161,13 +1121,14 @@ Team Area
                 <div class="swiper th-slider has-shadow" id="teamSlider1"
                     data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"3"},"992":{"slidesPerView":"4"},"1200":{"slidesPerView":"5"}}}'>
                     <div class="swiper-wrapper">
-                        <!-- Single Item -->
+
                         <div class="swiper-slide">
                             <div class="th-team team-card">
                                 <div class="team-card-corner team-card-corner1"></div>
                                 <div class="team-card-corner team-card-corner2"></div>
                                 <div class="team-card-corner team-card-corner3"></div>
                                 <div class="team-card-corner team-card-corner4"></div>
+                                <h3 class="box-title"><a href="#"></a></h3>
                                 <div class="img-wrap">
                                     <div class="team-img">
                                         <img src="assets/img/team/1-1.png" alt="Team">
@@ -1175,178 +1136,7 @@ Team Area
                                     <img class="game-logo" src="assets/img/team/game-logo1-1.png" alt="Team">
                                 </div>
                                 <div class="team-card-content">
-                                    <h3 class="box-title"><a href="team-details.html">Max Alexis</a></h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-card">
-                                <div class="team-card-corner team-card-corner1"></div>
-                                <div class="team-card-corner team-card-corner2"></div>
-                                <div class="team-card-corner team-card-corner3"></div>
-                                <div class="team-card-corner team-card-corner4"></div>
-                                <div class="img-wrap">
-                                    <div class="team-img">
-                                        <img src="assets/img/team/1-2.png" alt="Team">
-                                    </div>
-                                    <img class="game-logo" src="assets/img/team/game-logo1-2.png" alt="Team">
-                                </div>
-                                <div class="team-card-content">
-                                    <h3 class="box-title"><a href="team-details.html">Wilium Lili</a></h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-card">
-                                <div class="team-card-corner team-card-corner1"></div>
-                                <div class="team-card-corner team-card-corner2"></div>
-                                <div class="team-card-corner team-card-corner3"></div>
-                                <div class="team-card-corner team-card-corner4"></div>
-                                <div class="img-wrap">
-                                    <div class="team-img">
-                                        <img src="assets/img/team/1-3.png" alt="Team">
-                                    </div>
-                                    <img class="game-logo" src="assets/img/team/game-logo1-3.png" alt="Team">
-                                </div>
-                                <div class="team-card-content">
-                                    <h3 class="box-title"><a href="team-details.html">Mac Marsh</a></h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-card">
-                                <div class="team-card-corner team-card-corner1"></div>
-                                <div class="team-card-corner team-card-corner2"></div>
-                                <div class="team-card-corner team-card-corner3"></div>
-                                <div class="team-card-corner team-card-corner4"></div>
-                                <div class="img-wrap">
-                                    <div class="team-img">
-                                        <img src="assets/img/team/1-4.png" alt="Team">
-                                    </div>
-                                    <img class="game-logo" src="assets/img/team/game-logo1-4.png" alt="Team">
-                                </div>
-                                <div class="team-card-content">
-                                    <h3 class="box-title"><a href="team-details.html">Eva Raina</a></h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-card">
-                                <div class="team-card-corner team-card-corner1"></div>
-                                <div class="team-card-corner team-card-corner2"></div>
-                                <div class="team-card-corner team-card-corner3"></div>
-                                <div class="team-card-corner team-card-corner4"></div>
-                                <div class="img-wrap">
-                                    <div class="team-img">
-                                        <img src="assets/img/team/1-5.png" alt="Team">
-                                    </div>
-                                    <img class="game-logo" src="assets/img/team/game-logo1-5.png" alt="Team">
-                                </div>
-                                <div class="team-card-content">
-                                    <h3 class="box-title"><a href="team-details.html">Robin Cloth</a></h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-card">
-                                <div class="team-card-corner team-card-corner1"></div>
-                                <div class="team-card-corner team-card-corner2"></div>
-                                <div class="team-card-corner team-card-corner3"></div>
-                                <div class="team-card-corner team-card-corner4"></div>
-                                <div class="img-wrap">
-                                    <div class="team-img">
-                                        <img src="assets/img/team/1-1.png" alt="Team">
-                                    </div>
-                                    <img class="game-logo" src="assets/img/team/game-logo1-1.png" alt="Team">
-                                </div>
-                                <div class="team-card-content">
-                                    <h3 class="box-title"><a href="team-details.html">Max Alexis</a></h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-card">
-                                <div class="team-card-corner team-card-corner1"></div>
-                                <div class="team-card-corner team-card-corner2"></div>
-                                <div class="team-card-corner team-card-corner3"></div>
-                                <div class="team-card-corner team-card-corner4"></div>
-                                <div class="img-wrap">
-                                    <div class="team-img">
-                                        <img src="assets/img/team/1-2.png" alt="Team">
-                                    </div>
-                                    <img class="game-logo" src="assets/img/team/game-logo1-2.png" alt="Team">
-                                </div>
-                                <div class="team-card-content">
-                                    <h3 class="box-title"><a href="team-details.html">Wilium Lili</a></h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-card">
-                                <div class="team-card-corner team-card-corner1"></div>
-                                <div class="team-card-corner team-card-corner2"></div>
-                                <div class="team-card-corner team-card-corner3"></div>
-                                <div class="team-card-corner team-card-corner4"></div>
-                                <div class="img-wrap">
-                                    <div class="team-img">
-                                        <img src="assets/img/team/1-3.png" alt="Team">
-                                    </div>
-                                    <img class="game-logo" src="assets/img/team/game-logo1-3.png" alt="Team">
-                                </div>
-                                <div class="team-card-content">
-                                    <h3 class="box-title"><a href="team-details.html">Mac Marsh</a></h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-card">
-                                <div class="team-card-corner team-card-corner1"></div>
-                                <div class="team-card-corner team-card-corner2"></div>
-                                <div class="team-card-corner team-card-corner3"></div>
-                                <div class="team-card-corner team-card-corner4"></div>
-                                <div class="img-wrap">
-                                    <div class="team-img">
-                                        <img src="assets/img/team/1-4.png" alt="Team">
-                                    </div>
-                                    <img class="game-logo" src="assets/img/team/game-logo1-4.png" alt="Team">
-                                </div>
-                                <div class="team-card-content">
-                                    <h3 class="box-title"><a href="team-details.html">Eva Raina</a></h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Single Item -->
-                        <div class="swiper-slide">
-                            <div class="th-team team-card">
-                                <div class="team-card-corner team-card-corner1"></div>
-                                <div class="team-card-corner team-card-corner2"></div>
-                                <div class="team-card-corner team-card-corner3"></div>
-                                <div class="team-card-corner team-card-corner4"></div>
-                                <div class="img-wrap">
-                                    <div class="team-img">
-                                        <img src="assets/img/team/1-5.png" alt="Team">
-                                    </div>
-                                    <img class="game-logo" src="assets/img/team/game-logo1-5.png" alt="Team">
-                                </div>
-                                <div class="team-card-content">
-                                    <h3 class="box-title"><a href="team-details.html">Robin Cloth</a></h3>
+                                    <h3 class="box-title"><a href="#"></a></h3>
                                 </div>
                             </div>
                         </div>
@@ -1413,12 +1203,12 @@ Product Area
 ==============================-->
     <section class="space">
         <div class="container">
-            <div class="row justify-content-between align-items-center">
+            <div class="row justify-content-between align-items-center" id="crew-sec">
                 <div class="col-md-auto">
                     <div class="title-area custom-anim-left wow animated text-md-start text-center"
                         data-wow-duration="1.5s" data-wow-delay="0.2s">
-                        <span class="sub-title"># Gamer Shop</span>
-                        <h2 class="sec-title">Our Latest Gaming Products <span class="text-theme">!</span></h2>
+                        <span class="sub-title"># INDONESIA GTA V MASTER CHAMPIONSHIP</span>
+                        <h2 class="sec-title">TEAM IGMC 2024 <span class="text-theme">!</span></h2>
                     </div>
                 </div>
                 <div class="col-md-auto d-none d-md-block">
@@ -1433,36 +1223,34 @@ Product Area
                 </div>
             </div>
             <div class="swiper th-slider has-shadow" id="productSlider1"
-                data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"4"}}}'>
+                data-slider-options='{"breakpoints":{"0":{"slidesPerView":2},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"4"},"1300":{"slidesPerView":"5"}}}'>
                 <div class="swiper-wrapper">
 
-                    <div class="swiper-slide">
-                        <div class="th-product product-grid">
-                            <div class="product-img">
-                                <img src="assets/img/product/product_1_1.png" alt="Product Image">
-                                <div class="overlay gradient-border"></div>
-                                <div class="actions">
-                                    <a href="cart.html" class="icon-btn"><i class="far fa-cart-plus"></i></a>
-                                    <a href="wishlist.html" class="icon-btn"><i class="fas fa-heart"></i></a>
-                                    <a href="#QuickView" class="icon-btn popup-content"><i
-                                            class="fas fa-eye"></i></a>
+                    @foreach ($datacrew as $datacrew)
+                        <div class="swiper-slide">
+                            <div class="swiper-slide">
+                                <div class="th-team team-card">
+                                    <div class="team-card-corner team-card-corner1"></div>
+                                    <div class="team-card-corner team-card-corner2"></div>
+                                    <div class="team-card-corner team-card-corner3"></div>
+                                    <div class="team-card-corner team-card-corner4"></div>
+                                    <h5 class="box-title"><a href="#">{{ $datacrew->roles }}</a></h5>
+                                    <div class="img-wrap">
+                                        <div class="team-img">
+                                            <img src="assets/img/team/1-1.png" alt="Team">
+                                        </div>
+                                        <img class="game-logo" src="assets/img/team/game-logo1-1.png"
+                                            alt="Team">
+                                    </div>
+                                    <div class="team-card-content">
+                                        <h5 class="box-title"><a href="#">{{ $datacrew->name }}</a></h5>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="product-content">
-                                <h3 class="product-title"><a href="shop-details.html">Gaming Headphone</a></h3>
-                                <span class="price">$177.85</span>
-                                <!-- <div class="woocommerce-product-rating">
-                        <span class="count">(120 Reviews)</span>
-                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
-                            <span>Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span>
                         </div>
-                    </div> -->
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
 
-
-                    <div class="swiper-slide">
+                    {{-- <div class="swiper-slide">
                         <div class="th-product product-grid">
                             <div class="product-img">
                                 <img src="assets/img/product/product_1_2.png" alt="Product Image">
@@ -1477,12 +1265,6 @@ Product Area
                             <div class="product-content">
                                 <h3 class="product-title"><a href="shop-details.html">Gaming Mouse</a></h3>
                                 <span class="price">$120.00</span>
-                                <!-- <div class="woocommerce-product-rating">
-                        <span class="count">(120 Reviews)</span>
-                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
-                            <span>Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span>
-                        </div>
-                    </div> -->
                             </div>
                         </div>
                     </div>
@@ -1503,12 +1285,6 @@ Product Area
                             <div class="product-content">
                                 <h3 class="product-title"><a href="shop-details.html">Gaming Keyboard</a></h3>
                                 <span class="price">$96.85</span>
-                                <!-- <div class="woocommerce-product-rating">
-                        <span class="count">(120 Reviews)</span>
-                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
-                            <span>Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span>
-                        </div>
-                    </div> -->
                             </div>
                         </div>
                     </div>
@@ -1529,12 +1305,6 @@ Product Area
                             <div class="product-content">
                                 <h3 class="product-title"><a href="shop-details.html">Gaming Chair</a></h3>
                                 <span class="price">$08.85<del>$06.99</del></span>
-                                <!-- <div class="woocommerce-product-rating">
-                        <span class="count">(120 Reviews)</span>
-                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
-                            <span>Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span>
-                        </div>
-                    </div> -->
                             </div>
                         </div>
                     </div>
@@ -1555,12 +1325,6 @@ Product Area
                             <div class="product-content">
                                 <h3 class="product-title"><a href="shop-details.html">Microphone G9000</a></h3>
                                 <span class="price">$32.85</span>
-                                <!-- <div class="woocommerce-product-rating">
-                        <span class="count">(120 Reviews)</span>
-                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
-                            <span>Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span>
-                        </div>
-                    </div> -->
                             </div>
                         </div>
                     </div>
@@ -1582,12 +1346,6 @@ Product Area
                                 <h3 class="product-title"><a href="shop-details.html">Play Station Controller</a>
                                 </h3>
                                 <span class="price">$30.85</span>
-                                <!-- <div class="woocommerce-product-rating">
-                        <span class="count">(120 Reviews)</span>
-                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
-                            <span>Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span>
-                        </div>
-                    </div> -->
                             </div>
                         </div>
                     </div>
@@ -1608,12 +1366,6 @@ Product Area
                             <div class="product-content">
                                 <h3 class="product-title"><a href="shop-details.html">PlayStation VR</a></h3>
                                 <span class="price">$232.85</span>
-                                <!-- <div class="woocommerce-product-rating">
-                        <span class="count">(120 Reviews)</span>
-                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
-                            <span>Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span>
-                        </div>
-                    </div> -->
                             </div>
                         </div>
                     </div>
@@ -1634,16 +1386,9 @@ Product Area
                             <div class="product-content">
                                 <h3 class="product-title"><a href="shop-details.html">Wireless speaker</a></h3>
                                 <span class="price">$30.85</span>
-                                <!-- <div class="woocommerce-product-rating">
-                        <span class="count">(120 Reviews)</span>
-                        <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
-                            <span>Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span>
-                        </div>
-                    </div> -->
                             </div>
                         </div>
-                    </div>
-
+                    </div> --}}
                 </div>
             </div>
             <div class="d-block d-md-none mt-40 text-center">
@@ -1656,145 +1401,7 @@ Product Area
             </div>
         </div>
     </section>
-    <!--==============================
-Blog Area
-==============================-->
-    <section class="" id="blog-sec">
-        <div class="container">
-            <div class="title-area text-center custom-anim-top wow animated" data-wow-duration="1.5s"
-                data-wow-delay="0.2s">
-                <span class="sub-title"># Latest News</span>
-                <h2 class="sec-title">Stay Updated With Our Blog <span class="text-theme">!</span></h2>
-            </div>
-            <div class="slider-area">
-                <div class="swiper th-slider has-shadow" id="blogSlider1"
-                    data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="blog-card">
-                                <div class="blog-img">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/blog/blog_1_1.jpg" alt="blog image">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="blog.html"><i class="far fa-user"></i>By Jonson</a>
-                                        <a href="blog.html"><i class="far fa-calendar"></i>30 Nov, 2024</a>
-                                    </div>
-                                    <h3 class="blog-title"><a href="blog-details.html">Strategies for Dominating
-                                            Your Favorite Game</a></h3>
-                                    <a href="blog-details.html" class="link-btn style2">Read More <i
-                                            class="fas fa-arrow-right ms-1"></i></a>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="swiper-slide">
-                            <div class="blog-card">
-                                <div class="blog-img">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/blog/blog_1_2.jpg" alt="blog image">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="blog.html"><i class="far fa-user"></i>By Jonson</a>
-                                        <a href="blog.html"><i class="far fa-calendar"></i>25 Dec, 2024</a>
-                                    </div>
-                                    <h3 class="blog-title"><a href="blog-details.html">Breaking Barriers and Shaping
-                                            the Future</a></h3>
-                                    <a href="blog-details.html" class="link-btn style2">Read More <i
-                                            class="fas fa-arrow-right ms-1"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-card">
-                                <div class="blog-img">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/blog/blog_1_3.jpg" alt="blog image">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="blog.html"><i class="far fa-user"></i>By Jonson</a>
-                                        <a href="blog.html"><i class="far fa-calendar"></i>23 Jun, 2024</a>
-                                    </div>
-                                    <h3 class="blog-title"><a href="blog-details.html">Taking Customization to the
-                                            Next Level</a></h3>
-                                    <a href="blog-details.html" class="link-btn style2">Read More <i
-                                            class="fas fa-arrow-right ms-1"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-card">
-                                <div class="blog-img">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/blog/blog_1_1.jpg" alt="blog image">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="blog.html"><i class="far fa-user"></i>By Jonson</a>
-                                        <a href="blog.html"><i class="far fa-calendar"></i>30 Nov, 2024</a>
-                                    </div>
-                                    <h3 class="blog-title"><a href="blog-details.html">Strategies for Dominating
-                                            Your Favorite Game</a></h3>
-                                    <a href="blog-details.html" class="link-btn style2">Read More <i
-                                            class="fas fa-arrow-right ms-1"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-card">
-                                <div class="blog-img">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/blog/blog_1_2.jpg" alt="blog image">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="blog.html"><i class="far fa-user"></i>By Jonson</a>
-                                        <a href="blog.html"><i class="far fa-calendar"></i>25 Dec, 2024</a>
-                                    </div>
-                                    <h3 class="blog-title"><a href="blog-details.html">Breaking Barriers and Shaping
-                                            the Future</a></h3>
-                                    <a href="blog-details.html" class="link-btn style2">Read More <i
-                                            class="fas fa-arrow-right ms-1"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="blog-card">
-                                <div class="blog-img">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/blog/blog_1_3.jpg" alt="blog image">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <a href="blog.html"><i class="far fa-user"></i>By Jonson</a>
-                                        <a href="blog.html"><i class="far fa-calendar"></i>23 Jun, 2024</a>
-                                    </div>
-                                    <h3 class="blog-title"><a href="blog-details.html">Taking Customization to the
-                                            Next Level</a></h3>
-                                    <a href="blog-details.html" class="link-btn style2">Read More <i
-                                            class="fas fa-arrow-right ms-1"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!--==============================
 Client Area
 ==============================-->
