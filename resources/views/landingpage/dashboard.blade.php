@@ -605,7 +605,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">THE BIGGEST TOURNAMENT</a></h3>
+                        <h3 class="marquee-title"><a href="#">THE BIGGEST TOURNAMENT</a></h3>
                     </div>
 
                     <!-- Single Item -->
@@ -613,7 +613,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">IGMC - RGMC</a></h3>
+                        <h3 class="marquee-title"><a href="#">IGMC - RGMC</a></h3>
                     </div>
 
                     <!-- Single Item -->
@@ -621,7 +621,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">IGSC - GGMC</a></h3>
+                        <h3 class="marquee-title"><a href="#">IGSC - GGMC</a></h3>
                     </div>
 
                     <!-- Single Item -->
@@ -629,7 +629,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">INDONESIA GTA V MASTER CHAMPIONSHIP</a></h3>
+                        <h3 class="marquee-title"><a href="#">INDONESIA GTA V MASTER CHAMPIONSHIP</a></h3>
                     </div>
 
                     <!-- Single Item -->
@@ -637,7 +637,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">THE BIGGEST TOURNAMENT</a></h3>
+                        <h3 class="marquee-title"><a href="#">THE BIGGEST TOURNAMENT</a></h3>
                     </div>
 
                     <!-- Single Item -->
@@ -645,7 +645,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">IGMC - RGMC</a></h3>
+                        <h3 class="marquee-title"><a href="#">IGMC - RGMC</a></h3>
                     </div>
 
                     <!-- Single Item -->
@@ -653,7 +653,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">IGSC - GGMC</a></h3>
+                        <h3 class="marquee-title"><a href="#">IGSC - GGMC</a></h3>
                     </div>
 
                     <!-- Single Item -->
@@ -661,7 +661,7 @@ Marquee Area
                         <div class="marquee_icon">
                             <img src="assets/img/normal/star.png" alt="Icon">
                         </div>
-                        <h3 class="marquee-title"><a href="service-details.html">INDONESIA GTA V MASTER CHAMPIONSHIP</a></h3>
+                        <h3 class="marquee-title"><a href="#">INDONESIA GTA V MASTER CHAMPIONSHIP</a></h3>
                     </div>
 
                 </div>
