@@ -37,7 +37,7 @@
                         <li class="woocommerce-mini-cart-item mini_cart_item">
                             <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
                             <a href="#"><img src="assets/img/product/product_thumb_1_1.png"
-                                    alt="Cart Image">Gaming Headphone</a>
+                                    alt="Cart Image">PREMIUM</a>
                             <span class="quantity">1 ×
                                 <span class="woocommerce-Price-amount amount">
                                     <span class="woocommerce-Price-currencySymbol">$</span>940.00</span>
