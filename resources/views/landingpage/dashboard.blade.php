@@ -322,9 +322,9 @@
                     World Class eSports & Gaming Site</span>
                 <h1 class="hero-title">
                     <span class="title1 custom-anim-top wow animated" data-wow-duration="1.1s" data-wow-delay="0.3s"
-                        data-bg-src="assets/img/hero/hero-title-bg-shape1.svg">SHAPING THE FUTURE OF</span>
+                        data-bg-src="assets/img/hero/hero-title-bg-shape1.svg">INDONESIA GTA V MASTER CHAMPIONSHIP</span>
                     <span class="title2 custom-anim-top wow animated" data-wow-duration="1.1s"
-                        data-wow-delay="0.4s">ESPORTS</span>
+                        data-wow-delay="0.4s">IGMC</span>
                 </h1>
                 <div class="btn-group custom-anim-top wow animated" data-wow-duration="1.2s" data-wow-delay="0.7s">
                     <a href="about.html" class="th-btn">EXPLORE MORE <i class="fa-solid fa-arrow-right ms-2"></i></a>
