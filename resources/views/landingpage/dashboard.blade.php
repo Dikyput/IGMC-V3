@@ -304,7 +304,7 @@
         <button class="switchIcon"><i class="fa-solid fa-palette"></i></button>
         <h4 class="color-scheme-wrap-title"><i class="far fa-palette"></i> Color Switcher</h4>
         <div class="color-switch-btns">
-            <button data-color="#6240CF"><i class="fa-solid fa-droplet"></i></button>
+            <button data-color="#3b3433"><i class="fa-solid fa-droplet"></i></button>
             <button data-color="#FFBE18"><i class="fa-solid fa-droplet"></i></button>
             <button data-color="#24FFF2"><i class="fa-solid fa-droplet"></i></button>
             <button data-color="#45F882"><i class="fa-solid fa-droplet"></i></button>
