@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,5 +31,6 @@ Route::middleware(['admin.auth'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', function () {return view('dashboard.home');})->name('dashboard');
+    Route::get('shop', [ShopController::class, 'show'])->name('shop');
     Route::get('keluar', [DashboardController::class, 'keluar'])->name('keluar');
 });

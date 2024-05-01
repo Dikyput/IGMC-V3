@@ -89,7 +89,7 @@
                                             <li class="menu-item-has-children">
                                                 <a href="#">Shop</a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="#">Shop</a></li>
+                                                    <li><a href="{{ route('shop') }}">Shop</a></li>
                                                     <li><a href="#">Shop Details</a></li>
                                                     <li><a href="#">Cart Page</a></li>
                                                     <li><a href="#">Checkout</a></li>

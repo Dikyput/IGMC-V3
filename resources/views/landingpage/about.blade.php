@@ -576,14 +576,14 @@ Tournament Area
                         </div>
                         <div class="img-box3">
                             <div class="img1">
-                                <img src="assets/img/normal/about3-2.png" alt="About">
+                                <img src="{{ asset('assets/img/normal/about3-2.png') }}" alt="About">
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-6">
                         <div class="img-box3">
                             <div class="img1">
-                                <img src="assets/img/normal/about3-1.png" alt="About">
+                                <img src="{{ asset('assets/img/normal/about3-1.png') }}" alt="About">
                             </div>
                         </div>
                         <div class="about-content custom-anim-left wow animated" data-wow-duration="1.5s"

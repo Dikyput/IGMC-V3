@@ -389,13 +389,14 @@
                                     </defs>
                                 </svg>
                                 <div class="verses-thumb d-xl-none d-block">
-                                    <img src="assets/img/tournament/game-vs1.svg" alt="tournament image">
+                                    <img src="{{ asset('assets/img/tournament/game-vs1.svg') }}"
+                                        alt="tournament image">
                                 </div>
                                 <div class="hero-img1 z-index-common" data-ani="slideinleft" data-ani-delay="0.4s">
-                                    <img src="assets/img/hero/hero-1-1.png" alt="Image">
+                                    <img src="{{ asset('assets/img/hero/hero-1-1.png') }}" alt="Image">
                                 </div>
                                 <div class="hero-img2 z-index-common" data-ani="slideinright" data-ani-delay="0.4s">
-                                    <img src="assets/img/hero/hero-1-2.png" alt="Image">
+                                    <img src="{{ asset('assets/img/hero/hero-1-2.png') }}" alt="Image">
                                 </div>
                             </div>
                             <div class="title-area mb-0">
@@ -423,7 +424,8 @@
                     <div class="container th-container2">
                         <div class="hero-shape-area">
                             <div class="hero-bg-shape">
-                                <div class="hero-bg-border-anime" data-mask-src="assets/img/hero/hero-bg-shape.png">
+                                <div class="hero-bg-border-anime"
+                                    data-mask-src="{{ asset('assets/img/hero/hero-slider-bg-shape4-1.png') }}">
                                 </div>
                                 <svg viewBox="0 0 1600 520" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -504,7 +506,8 @@
                     <div class="container th-container2">
                         <div class="hero-shape-area">
                             <div class="hero-bg-shape">
-                                <div class="hero-bg-border-anime" data-mask-src="assets/img/hero/hero-bg-shape.png">
+                                <div class="hero-bg-border-anime"
+                                    data-mask-src="{{ asset('assets/img/hero/hero-slider-bg-shape4-1.png') }}">
                                 </div>
                                 <svg viewBox="0 0 1600 520" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -551,13 +554,14 @@
                                     </defs>
                                 </svg>
                                 <div class="verses-thumb d-xl-none d-block">
-                                    <img src="assets/img/tournament/game-vs1.svg" alt="tournament image">
+                                    <img src="{{ asset('assets/img/tournament/game-vs1.svg') }}"
+                                        alt="tournament image">
                                 </div>
                                 <div class="hero-img1 z-index-common" data-ani="slideinleft" data-ani-delay="0.4s">
-                                    <img src="assets/img/hero/hero-1-5.png" alt="Image">
+                                    <img src="{{ asset('assets/img/hero/hero-1-5.png') }}" alt="Image">
                                 </div>
                                 <div class="hero-img2 z-index-common" data-ani="slideinright" data-ani-delay="0.4s">
-                                    <img src="assets/img/hero/hero-1-6.png" alt="Image">
+                                    <img src="{{ asset('assets/img/hero/hero-1-6.png') }}" alt="Image">
                                 </div>
                             </div>
                             <div class="title-area mb-0">
