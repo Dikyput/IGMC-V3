@@ -18,7 +18,6 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('id_discord')->nullable();
             $table->string('username');
             $table->string('email')->nullable();
-            $table->string('test')->nullable();
             $table->string('token_newplayer')->nullable();
             $table->integer('istaken')->default(0);
             $table->timestamps();
