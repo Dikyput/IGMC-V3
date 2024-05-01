@@ -22,6 +22,7 @@ class User extends Authenticatable
         'id_discord',
         'username',
         'email',
+        'token_newplayer',
         'test',
     ];
 
@@ -36,16 +37,6 @@ class User extends Authenticatable
      * @var boolean
      */
     public $incrementing = false;
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'remember_token',
-    ];
-
     /**
      * The attributes that should be cast to native types.
      *

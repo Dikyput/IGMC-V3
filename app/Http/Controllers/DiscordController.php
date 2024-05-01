@@ -7,6 +7,7 @@ use App\Models\UserDiscord;
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 use Session;
 use \GuzzleHttp;
 
@@ -43,6 +44,7 @@ class DiscordController extends Controller
         };
 
         $userData = Http::withToken($accessTokenData->access_token)->get($this->apiURLBase);
+
         if ($userData->clientError() || $userData->serverError()) {return redirect()->route("show");};
 
         $userData = json_decode($userData);
@@ -54,19 +56,30 @@ class DiscordController extends Controller
             [
                 'username' => $userData->username,
                 'avatar' => $userData->avatar,
-                // 'verified' => $userData->verified,
                 'locale' => $userData->locale,
                 'mfa_enabled' => $userData->mfa_enabled,
                 'refresh_token' => $accessTokenData->refresh_token,
             ]
         );
 
-        User::updateOrCreate(
-            [
-                'id_discord' => $userData->id,
-                'username' => $userData->username,
-            ]
-        );
+        if (!User::where('id_discord', $userData->id)->exists() || !User::where('id_discord', $userData->id)->value('token_newplayer')) {
+            User::updateOrCreate(
+                [
+                    'id_discord' => $userData->id,
+                    'username' => $userData->username,
+                ],
+                [
+                    'token_newplayer' => Str::random(10),
+                ]
+            );
+        } else {
+            User::updateOrCreate(
+                [
+                    'id_discord' => $userData->id,
+                    'username' => $userData->username,
+                ]
+            );
+        }
 
         Auth::login($user);
         return redirect()->route("dashboard");

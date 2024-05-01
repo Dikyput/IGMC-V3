@@ -19,7 +19,8 @@ class CreateUsersTable extends Migration
             $table->string('username');
             $table->string('email')->nullable();
             $table->string('test')->nullable();
-            $table->rememberToken();
+            $table->string('token_newplayer')->nullable();
+            $table->integer('istaken')->default(0);
             $table->timestamps();
         });
     }
