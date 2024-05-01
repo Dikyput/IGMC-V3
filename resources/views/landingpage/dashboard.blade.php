@@ -184,7 +184,7 @@
                 <div class="recent-post-wrap">
                     <div class="recent-post">
                         <div class="media-img">
-                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-1.jpg"
+                            <a href="blog-details.html"><img src="{{ asset('assets/img/blog/recent-post-1-1.jpg') }}"
                                     alt="Blog Image"></a>
                         </div>
                         <div class="media-body">
@@ -197,7 +197,7 @@
                     </div>
                     <div class="recent-post">
                         <div class="media-img">
-                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-2.jpg"
+                            <a href="blog-details.html"><img src="{{ asset('assets/img/blog/recent-post-1-2.jpg') }}"
                                     alt="Blog Image"></a>
                         </div>
                         <div class="media-body">
@@ -210,7 +210,7 @@
                     </div>
                     <div class="recent-post">
                         <div class="media-img">
-                            <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-3.jpg"
+                            <a href="blog-details.html"><img src="{{ asset('assets/img/blog/recent-post-1-3.jpg') }}"
                                     alt="Blog Image"></a>
                         </div>
                         <div class="media-body">
@@ -249,7 +249,7 @@
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
                 <a href="#"><span data-mask-src="{{ asset('assets/img/logo.svg') }}"
-                        class="logo-mask"></span><img src="assets/img/logo.svg" alt="Bame"></a>
+                        class="logo-mask"></span><img src="{{ asset('assets/img/logo.svg') }}" alt="Bame"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
@@ -315,14 +315,14 @@
 ==============================-->
     @include('landingpage.public.header')
 
-    <div class="th-hero-wrapper hero-1" id="hero" data-bg-src="assets/img/hero/hero-bg1-1.png">
+    <div class="th-hero-wrapper hero-1" id="hero" data-bg-src="{{ asset('assets/img/hero/hero-bg1-1.png') }}">
         <div class="container">
             <div class="hero-style1 text-center">
                 <span class="sub-title custom-anim-top wow animated" data-wow-duration="1.2s" data-wow-delay="0.1s">#
                     Every One Can Be Ontop & #IGMC</span>
                 <h1 class="hero-title">
                     <span class="title1 custom-anim-top wow animated" data-wow-duration="1.1s" data-wow-delay="0.3s"
-                        data-bg-src="assets/img/hero/hero-title-bg-shape1.svg">INDONESIA GTA V MASTER
+                        data-bg-src="{{ asset('assets/img/hero/hero-title-bg-shape1.svg') }}">INDONESIA GTA V MASTER
                         CHAMPIONSHIP</span>
                     <span class="title2 custom-anim-top wow animated" data-wow-duration="1.1s"
                         data-wow-delay="0.4s">IGMC</span>
@@ -330,10 +330,6 @@
                 <div class="btn-group custom-anim-top wow animated" data-wow-duration="1.2s" data-wow-delay="0.7s">
                     <div href="#" class="th-btn">PLAYER 0 / 100000</div>
                 </div>
-
-                {{-- <a href="https://discord.com/oauth2/authorize?client_id={{ env('DISCORD_CLIENT_ID') }}&redirect_uri={{ env('DISCORD_REDIRECT_URI') }}&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Flogin&scope=identify+guilds+guilds.join"
-                        class="th-btn style2">LOGIN WITH DISCORD <i class="fa-solid fa-arrow-right ms-2"></i></a> --}}
-
             </div>
         </div>
     </div>
@@ -345,7 +341,8 @@
                     <div class="container th-container2">
                         <div class="hero-shape-area">
                             <div class="hero-bg-shape">
-                                <div class="hero-bg-border-anime" data-mask-src="assets/img/hero/hero-bg-shape.png">
+                                <div class="hero-bg-border-anime"
+                                    data-mask-src="{{ asset('assets/img/hero/hero-slider-bg-shape4-1.png') }}">
                                 </div>
                                 <svg viewBox="0 0 1600 520" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -392,14 +389,13 @@
                                     </defs>
                                 </svg>
                                 <div class="verses-thumb d-xl-none d-block">
-                                    <img src="{{ asset('assets/img/tournament/game-vs1.svg') }}"
-                                        alt="tournament image">
+                                    <img src="assets/img/tournament/game-vs1.svg" alt="tournament image">
                                 </div>
                                 <div class="hero-img1 z-index-common" data-ani="slideinleft" data-ani-delay="0.4s">
-                                    <img src="{{ asset('assets/img/hero/hero-1-1.png') }}" alt="Image">
+                                    <img src="assets/img/hero/hero-1-1.png" alt="Image">
                                 </div>
                                 <div class="hero-img2 z-index-common" data-ani="slideinright" data-ani-delay="0.4s">
-                                    <img src="{{ asset('assets/img/hero/hero-1-2.png') }}" alt="Image">
+                                    <img src="assets/img/hero/hero-1-2.png" alt="Image">
                                 </div>
                             </div>
                             <div class="title-area mb-0">
@@ -743,7 +739,7 @@ Marquee Area
                         </tr>
                         <tr>
                             <th scope="row">6</th>
-                            <td><a href="tournament.html"><img src="assets/img/tournament/1-6.png"
+                            <td><a href="tournament.html"><img src="{{ asset('assets/img/tournament/1-6.png') }}"
                                         alt="img">King Of Badgamer</a></td>
                             <td>4</td>
                             <td>0</td>
@@ -956,7 +952,7 @@ Feature Area
                     <div class="tournament-card gradient-border">
                         <div class="tournament-card-img">
                             <img src="assets/img/tournament/1-1.png" alt="tournament image">
-                            <img src="assets/img/tournament/game-vs1.svg" alt="tournament image">
+                            <img src="{{ asset('assets/img/tournament/game-vs1.svg') }}" alt="tournament image">
                             <img src="assets/img/tournament/1-2.png" alt="tournament image">
                         </div>
                         <div class="tournament-card-content">
@@ -982,7 +978,7 @@ Feature Area
                     <div class="tournament-card gradient-border">
                         <div class="tournament-card-img">
                             <img src="assets/img/tournament/1-3.png" alt="tournament image">
-                            <img src="assets/img/tournament/game-vs1.svg" alt="tournament image">
+                            <img src="{{ asset('assets/img/tournament/game-vs1.svg') }}" alt="tournament image">
                             <img src="assets/img/tournament/1-4.png" alt="tournament image">
                         </div>
                         <div class="tournament-card-content">
@@ -1007,9 +1003,9 @@ Feature Area
                 <div class="col-12 filter-item cat1">
                     <div class="tournament-card gradient-border">
                         <div class="tournament-card-img">
-                            <img src="assets/img/tournament/1-5.png" alt="tournament image">
-                            <img src="assets/img/tournament/game-vs1.svg" alt="tournament image">
-                            <img src="assets/img/tournament/1-6.png" alt="tournament image">
+                            <img src="{{ asset('assets/img/tournament/1-5.png') }}" alt="tournament image">
+                            <img src="{{ asset('assets/img/tournament/game-vs1.svg') }}" alt="tournament image">
+                            <img src="{{ asset('assets/img/tournament/1-6.png') }}" alt="tournament image">
                         </div>
                         <div class="tournament-card-content">
                             <div class="tournament-card-details">
@@ -1046,49 +1042,49 @@ Gallery Area
 ==============================-->
                         <div class="swiper-slide gallery-wrap1">
                             <div class="th-video">
-                                <img src="assets/img/video/1-1.png" alt="img">
-                                <a href="assets/img/video/1-1.png" class="play-btn popup-image style3"><i
-                                        class="fa-solid fa-arrow-up-right"></i></a>
+                                <img src="{{ asset('assets/img/video/1-1.png') }}" alt="img">
+                                <a href="{{ asset('assets/img/video/1-1.png') }}"
+                                    class="play-btn popup-image style3"><i class="fa-solid fa-arrow-up-right"></i></a>
                             </div>
                         </div>
 
                         <div class="swiper-slide gallery-wrap1">
                             <div class="th-video">
-                                <img src="assets/img/video/1-2.png" alt="img">
-                                <a href="assets/img/video/1-2.png" class="play-btn popup-image style3"><i
-                                        class="fa-solid fa-arrow-up-right"></i></a>
+                                <img src="{{ asset('assets/img/video/1-2.png') }}" alt="img">
+                                <a href="{{ asset('assets/img/video/1-2.png') }}"
+                                    class="play-btn popup-image style3"><i class="fa-solid fa-arrow-up-right"></i></a>
                             </div>
                         </div>
 
                         <div class="swiper-slide gallery-wrap1">
                             <div class="th-video">
-                                <img src="assets/img/video/1-3.png" alt="img">
-                                <a href="assets/img/video/1-3.png" class="play-btn popup-image style3"><i
-                                        class="fa-solid fa-arrow-up-right"></i></a>
+                                <img src="{{ asset('assets/img/video/1-3.png') }}" alt="img">
+                                <a href="{{ asset('assets/img/video/1-3.png') }}"
+                                    class="play-btn popup-image style3"><i class="fa-solid fa-arrow-up-right"></i></a>
                             </div>
                         </div>
 
                         <div class="swiper-slide gallery-wrap1">
                             <div class="th-video">
-                                <img src="assets/img/video/1-1.png" alt="img">
-                                <a href="assets/img/video/1-1.png" class="play-btn popup-image style3"><i
-                                        class="fa-solid fa-arrow-up-right"></i></a>
+                                <img src="{{ asset('assets/img/video/1-1.png') }}" alt="img">
+                                <a href="{{ asset('assets/img/video/1-1.png') }}"
+                                    class="play-btn popup-image style3"><i class="fa-solid fa-arrow-up-right"></i></a>
                             </div>
                         </div>
 
                         <div class="swiper-slide gallery-wrap1">
                             <div class="th-video">
-                                <img src="assets/img/video/1-2.png" alt="img">
-                                <a href="assets/img/video/1-2.png" class="play-btn popup-image style3"><i
-                                        class="fa-solid fa-arrow-up-right"></i></a>
+                                <img src="{{ asset('assets/img/video/1-2.png') }}" alt="img">
+                                <a href="{{ asset('assets/img/video/1-2.png') }}"
+                                    class="play-btn popup-image style3"><i class="fa-solid fa-arrow-up-right"></i></a>
                             </div>
                         </div>
 
                         <div class="swiper-slide gallery-wrap1">
                             <div class="th-video">
-                                <img src="assets/img/video/1-3.png" alt="img">
-                                <a href="assets/img/video/1-3.png" class="play-btn popup-image style3"><i
-                                        class="fa-solid fa-arrow-up-right"></i></a>
+                                <img src="{{ asset('assets/img/video/1-3.png') }}" alt="img">
+                                <a href="{{ asset('assets/img/video/1-3.png') }}"
+                                    class="play-btn popup-image style3"><i class="fa-solid fa-arrow-up-right"></i></a>
                             </div>
                         </div>
 
@@ -1105,7 +1101,7 @@ Team Area
 ==============================-->
     <section class="team-sec-1 space">
         <div class="team-shape1-1 shape-mockup" data-top="0" data-right="0"><img
-                src="assets/img/bg/team-sec1-bg.png" alt="img"></div>
+                src="{{ asset('assets/img/bg/team-sec1-bg.png') }}" alt="img"></div>
         <div class="container th-container3">
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-7 col-md-8">
@@ -1130,9 +1126,10 @@ Team Area
                                 <h3 class="box-title"><a href="#"></a></h3>
                                 <div class="img-wrap">
                                     <div class="team-img">
-                                        <img src="assets/img/team/1-1.png" alt="Team">
+                                        <img src="{{ asset('assets/img/team/1-1.png') }}" alt="Team">
                                     </div>
-                                    <img class="game-logo" src="assets/img/team/game-logo1-1.png" alt="Team">
+                                    <img class="game-logo" src="{{ asset('assets/img/team/game-logo1-1.png') }}"
+                                        alt="Team">
                                 </div>
                                 <div class="team-card-content">
                                     <h3 class="box-title"><a href="#"></a></h3>
@@ -1169,13 +1166,13 @@ Cta Area
                     </defs>
                 </svg>
             </div>
-            <div class="cta-wrap-bg bg-repeat" data-bg-src="assets/img/bg/jiji-bg.png"
-                data-mask-src="assets/img/shape/cta-bg-shape1.svg">
+            <div class="cta-wrap-bg bg-repeat" data-bg-src="{{ asset('assets/img/bg/jiji-bg.png') }}"
+                data-mask-src="{{ asset('assets/img/shape/cta-bg-shape1.svg') }}">
                 <div class="cta-bg-img">
-                    <img src="assets/img/bg/cta-sec1-bg.png" alt="img">
+                    <img src="{{ asset('assets/img/bg/cta-sec1-bg.png') }}" alt="img">
                 </div>
                 <div class="cta-thumb">
-                    <img src="assets/img/normal/cta1-1.png" alt="img">
+                    <img src="{{ asset('assets/img/normal/cta1-1.png') }}" alt="img">
                 </div>
             </div>
             <div class="cta-wrap">
@@ -1235,10 +1232,10 @@ Product Area
                                     <h5 class="box-title"><a href="#">{{ $datacrew->roles }}</a></h5>
                                     <div class="img-wrap">
                                         <div class="team-img">
-                                            <img src="assets/img/team/1-1.png" alt="Team">
+                                            <img src="{{ asset('assets/img/team/1-1.png') }}" alt="Team">
                                         </div>
-                                        <img class="game-logo" src="assets/img/team/game-logo1-1.png"
-                                            alt="Team">
+                                        <img class="game-logo"
+                                            src="{{ asset('assets/img/team/game-logo1-1.png') }}" alt="Team">
                                     </div>
                                     <div class="team-card-content">
                                         <h5 class="box-title"><a href="#">{{ $datacrew->name }}</a></h5>

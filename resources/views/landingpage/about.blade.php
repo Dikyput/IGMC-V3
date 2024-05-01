@@ -302,7 +302,7 @@ About Area
                 <div class="col-xl-7 mb-50 mb-xl-0">
                     <div class="img-box2">
                         <div class="img1">
-                            <img src="assets/img/normal/about2-1.png" alt="About">
+                            <img src="{{ asset('assets/img/normal/about1-1.png') }}" alt="About">
                         </div>
                     </div>
                 </div>
@@ -548,11 +548,9 @@ Tournament Area
                 </div>
             </div>
         </div>
-    </section> <!--==============================
-About Area
-==============================-->
+    </section>
     <div class="about-sec-3 overflow-hidden space-top position-relative z-index-common"
-        data-bg-src="assets/img/bg/about-bg2.png">
+        data-bg-src="{{ asset('assets/img/bg/about-bg1.png') }}">
         <div class="gr-bg1 overlay"></div>
         <div class="container">
             <div class="about-wrap3">
