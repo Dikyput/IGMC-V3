@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>XXXXa</title>
+    <title>XXXX</title>
     <meta name="author" content="Bame">
     <meta name="description" content="Bame - Esports & Gaming HTML Template">
     <meta name="keywords" content="Bame - Esports & Gaming HTML Template">

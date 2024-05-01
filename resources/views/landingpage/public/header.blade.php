@@ -7,8 +7,22 @@
                     <div class="header-links">
                         <ul>
                             <li>
-                                <div class="header-notice">Welcome to our <a href="#">IGMC</a>
-                                </div>
+                                @auth
+                                    <div class="header-notice">YOUR AKSES TOKEN INGAME <a href="#">
+                                            @if (Auth::check())
+                                                @php
+                                                    $user = Auth::user();
+                                                    $token = $user->iddiscord;
+                                                @endphp
+
+                                                @if ($token)
+                                                    {{ $token->token_newplayer }}
+                                                @endif
+                                            @endif
+                                        </a></div>
+                                @else
+                                    <div class="header-notice">Welcome to our <a href="#">IGMC</a></div>
+                                @endauth
                             </li>
                             <li>
                                 <div class="dropdown-link">

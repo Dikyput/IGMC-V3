@@ -23,6 +23,7 @@ class User extends Authenticatable
         'username',
         'email',
         'token_newplayer',
+        'istaken',
         'test',
     ];
 
@@ -45,4 +46,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function usertoken()
+    {
+        return $this->hasOne(UserDiscord::class, 'id_discord', 'id_discord');
+    }
 }
