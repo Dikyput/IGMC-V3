@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Shop;
 use App\Models\UserDiscord;
 use Auth;
 use Illuminate\Http\Request;
@@ -82,9 +83,67 @@ class DiscordController extends Controller
         }
 
         Auth::login($user);
-        return redirect()->route("dashboard");
+
+        // if (!$user->isVerified) {
+        //     $datashop = shop::orderBy('id')->distinct()->get();
+        //     return view('dashboard.shop', compact('datashop'));
+        //     return redirect()->route("verification");
+        // } else {
+        //     return redirect()->route("dashboard");
+        // }
+        if (!UserDiscord::where('id_discord', $userData->id)->value('isVerified')) {
+            return redirect()->route("verification");
+        } else {
+            return redirect()->route("dashboard");
+        }
     }
 
+    public function verifyToken(Request $request)
+    {
+    $request->validate([
+        'token' => 'required|string',
+    ]);
+
+    $userData = Auth::user();
+    $userData = User::find($userData->id_discord);
+    $inputToken = $request->token;
+    $updateprofilku = $userData->isTaken;
+    $tokenku = $userData->token_newplayer;
+    if ($tokenku === $inputToken) {
+        $userData = UserDiscord::updateOrCreate(
+            [
+                'id_discord' => $userData->id_discord,
+            ],
+            [
+                'isVerified' => 1,
+            ]);
+        return redirect()->route('updateprofile')->with('status', 'Your account has been verified!');
+    }
+    return redirect()->route('verification')->withErrors(['token' => 'The provided token is incorrect.']);
+    }
+
+
+    public function update_profile(Request $request)
+    {
+        $user = Auth::user();
+        if ($user->isVerified == 1) {
+            $user->iddiscord()->update([
+                'firstname' => $request->input('firstname'),
+                'lastname' => $request->input('lastname'),
+                'email' => $request->input('email'),
+                'nationaly' => $request->input('nationaly'),
+            ]);
+            $user->update([
+                'isVerified' => 2,
+            ]);
+
+            return redirect()->route('dashboard')->with('status', 'Profile updated successfully!');
+        } else {
+            return redirect()->back()->with('error', 'You need to be verified to update your profile.');
+        }
+    }
+
+    
     public function logout(Request $request)
     {
         Auth::logout();

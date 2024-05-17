@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>XXXX</title>
-    <meta name="author" content="Bame">
-    <meta name="description" content="Bame - Esports & Gaming HTML Template">
-    <meta name="keywords" content="Bame - Esports & Gaming HTML Template">
+    <title>IGMC V3</title>
+    <meta name="author" content="IGMCV3">
+    <meta name="description" content="IGMC V3 - Indonesia GTA V Master Championship">
+    <meta name="keywords" content="IGMC V3 - Indonesia GTA V Master Championship">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -160,7 +160,7 @@ Sidemenu
                     <div class="about-logo">
                         <a href="index.html">
                             <span data-mask-src="assets/img/logo.svg" class="logo-mask"></span>
-                            <img src="assets/img/logo.svg" alt="Bame">
+                            <img src="assets/img/logo.svg" alt="IGMCV3">
                         </a>
                     </div>
                     <p class="about-text"> Beyond esports tournaments, include a broader calendar of gaming events,

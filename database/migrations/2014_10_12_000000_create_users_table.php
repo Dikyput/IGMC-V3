@@ -16,8 +16,12 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_discord')->nullable();
+            $table->string('license')->nullable();
             $table->string('username');
+            $table->string('firstname')->nullable();
+            $table->string('lastname')->nullable();
             $table->string('email')->nullable();
+            $table->string('nationaly')->nullable();
             $table->string('token_newplayer')->nullable();
             $table->integer('istaken')->default(0);
             $table->timestamps();

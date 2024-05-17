@@ -21,7 +21,11 @@ class User extends Authenticatable
     protected $fillable = [
         'id_discord',
         'username',
+        'license',
+        'firstname',
+        'lastname',
         'email',
+        'nationaly',
         'token_newplayer',
         'istaken',
         'test',

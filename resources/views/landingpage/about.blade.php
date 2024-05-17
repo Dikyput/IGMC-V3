@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>ABOUT US</title>
-    <meta name="author" content="Bame">
-    <meta name="description" content="Bame - Esports & Gaming HTML Template">
-    <meta name="keywords" content="Bame - Esports & Gaming HTML Template">
+    <meta name="author" content="IGMCV3">
+    <meta name="description" content="IGMC V3 - Indonesia GTA V Master Championship">
+    <meta name="keywords" content="IGMC V3 - Indonesia GTA V Master Championship">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -104,7 +104,7 @@
                     <div class="about-logo">
                         <a href="index.html">
                             <span data-mask-src="assets/img/logo.svg" class="logo-mask"></span>
-                            <img src="assets/img/logo.svg" alt="Bame">
+                            <img src="assets/img/logo.svg" alt="IGMCV3">
                         </a>
                     </div>
                     <p class="about-text"> Beyond esports tournaments, include a broader calendar of gaming events,
@@ -198,7 +198,7 @@
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
                 <a href="index.html"><span data-mask-src="assets/img/logo.svg" class="logo-mask"></span><img
-                        src="assets/img/logo.svg" alt="Bame"></a>
+                        src="assets/img/logo.svg" alt="IGMCV3"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
@@ -449,7 +449,7 @@ Tournament Area
                 <div class="col-lg-12">
                     <div class="title-area text-center custom-anim-top wow animated" data-wow-duration="1.5s"
                         data-wow-delay="0.2s">
-                        <span class="sub-title style2"># History of Bame Trophy </span>
+                        <span class="sub-title style2"># History of IGMCV3 Trophy </span>
                         <h2 class="sec-title">Our All Tournaments History <span class="text-theme">!</span></h2>
                     </div>
                 </div>

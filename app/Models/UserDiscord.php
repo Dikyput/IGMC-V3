@@ -16,6 +16,7 @@ class UserDiscord extends Model implements Authenticatable
         'username',
         'avatar',
         'locale',
+        'isVerified',
         'mfa_enabled',
         'refresh_token',
     ];
@@ -37,5 +38,15 @@ class UserDiscord extends Model implements Authenticatable
     public function getRouteKeyName()
     {
         return 'id_discord';
+    }
+
+    public function discord()
+    {
+        return $this->hasOne(UserDiscord::class, 'id_discord', 'id_discord');
+    }
+
+    public function getAvatarUrl()
+    {
+        return $this->avatar ? "https://cdn.discordapp.com/avatars/{$this->id_discord}/{$this->avatar}.png" : 'https://cdn.discordapp.com/embed/avatars/0.png';
     }
 }

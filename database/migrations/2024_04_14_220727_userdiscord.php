@@ -19,6 +19,7 @@ class Userdiscord extends Migration
             $table->string('avatar')->nullable();
             // $table->boolean('verified');
             $table->string('locale');
+            $table->integer('isVerified')->default(0);
             $table->boolean('mfa_enabled');
             $table->string('refresh_token')->nullable();
             $table->rememberToken();

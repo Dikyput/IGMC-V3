@@ -66,7 +66,7 @@
                         <div class="header-logo">
                             <a href="index.html">
                                 <span data-mask-src="assets/img/logo.svg" class="logo-mask"></span>
-                                <img src="assets/img/logo.svg" alt="Bame">
+                                <img src="assets/img/logo.svg" alt="IGMCV3">
                             </a>
                         </div>
                     </div>
