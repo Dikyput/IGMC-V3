@@ -158,9 +158,9 @@ Sidemenu
             <div class="widget footer-widget">
                 <div class="th-widget-about">
                     <div class="about-logo">
-                        <a href="index.html">
-                            <span data-mask-src="assets/img/logo.svg" class="logo-mask"></span>
-                            <img src="assets/img/logo.svg" alt="IGMCV3">
+                        <a href="/">
+                            <span data-mask-src="assets/img/IGMCV3.svg" class="logo-mask"></span>
+                            <img src="assets/img/IGMCV3.svg" alt="IGMCV3">
                         </a>
                     </div>
                     <p class="about-text"> Beyond esports tournaments, include a broader calendar of gaming events,
@@ -256,7 +256,7 @@ Sidemenu
             <div class="breadcumb-content">
                 <h1 class="breadcumb-title">Shop</h1>
                 <ul class="breadcumb-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li>Shop</li>
                 </ul>
             </div>

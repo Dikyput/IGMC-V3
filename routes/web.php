@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DiscordController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\TopupsaldoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,7 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', [DashboardController::class, 'show'])->name('show');
+Route::get('/topup-saldo', [TopupsaldoController::class, 'showlist'])->name('topup-saldo');
 Route::get('/about', [DashboardController::class, 'about'])->name('about');
 Route::get('/tournament', [DashboardController::class, 'tournament'])->name('tournament');
 Route::get('/tournamentdetails', [DashboardController::class, 'tournamentdetails'])->name('tournamentdetails');

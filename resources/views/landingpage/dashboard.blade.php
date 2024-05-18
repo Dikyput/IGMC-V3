@@ -155,8 +155,8 @@
                 <div class="th-widget-about">
                     <div class="about-logo">
                         <a href="#">
-                            <span data-mask-src="{{ asset('assets/img/xxx.png') }}" class="logo-mask"></span>
-                            <img src="{{ asset('assets/img/xxx.png') }}" alt="IGMCV3">
+                            <span data-mask-src="{{ asset('assets/img/IGMCV3.svg') }}" class="logo-mask"></span>
+                            <img src="{{ asset('assets/img/IGMCV3.svg') }}" alt="IGMCV3">
                         </a>
                     </div>
                     <p class="about-text"> Beyond esports tournaments, include a broader calendar of gaming events,
@@ -248,15 +248,15 @@
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="#"><span data-mask-src="{{ asset('assets/img/logo.svg') }}"
-                        class="logo-mask"></span><img src="{{ asset('assets/img/logo.svg') }}" alt="IGMCV3"></a>
+                <a href="#"><span data-mask-src="{{ asset('assets/img/IGMCV3.svg') }}"
+                        class="logo-mask"></span><img src="{{ asset('assets/img/IGMCV3.svg') }}" alt="IGMCV3"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
                     <li class="menu-item-has-children">
-                        <a href="index.html">HOME</a>
+                        <a href="/">HOME</a>
                         <ul class="sub-menu">
-                            <li><a href="index.html">Home Esports</a></li>
+                            <li><a href="/">Home Esports</a></li>
                             <li><a href="home-2.html">Home Streaming</a></li>
                             <li><a href="home-3.html">Home Video Gaming</a></li>
                             <li><a href="home-4.html">Home Tournament</a></li>

@@ -99,9 +99,9 @@
             <div class="widget footer-widget">
                 <div class="th-widget-about">
                     <div class="about-logo">
-                        <a href="index.html">
-                            <span data-mask-src="assets/img/logo.svg" class="logo-mask"></span>
-                            <img src="assets/img/logo.svg" alt="IGMCV3">
+                        <a href="/">
+                            <span data-mask-src="assets/img/IGMCV3.svg" class="logo-mask"></span>
+                            <img src="assets/img/IGMCV3.svg" alt="IGMCV3">
                         </a>
                     </div>
                     <p class="about-text"> Beyond esports tournaments, include a broader calendar of gaming events,
@@ -194,15 +194,15 @@
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="index.html"><span data-mask-src="assets/img/logo.svg" class="logo-mask"></span><img
-                        src="assets/img/logo.svg" alt="IGMCV3"></a>
+                <a href="/"><span data-mask-src="assets/img/IGMCV3.svg" class="logo-mask"></span><img
+                        src="assets/img/IGMCV3.svg" alt="IGMCV3"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
                     <li class="menu-item-has-children">
-                        <a href="index.html">HOME</a>
+                        <a href="/">HOME</a>
                         <ul class="sub-menu">
-                            <li><a href="index.html">Home Esports</a></li>
+                            <li><a href="/">Home Esports</a></li>
                             <li><a href="home-2.html">Home Streaming</a></li>
                             <li><a href="home-3.html">Home Video Gaming</a></li>
                             <li><a href="home-4.html">Home Tournament</a></li>
@@ -274,7 +274,7 @@
             <div class="breadcumb-content">
                 <h1 class="breadcumb-title">BLOG STANDARD</h1>
                 <ul class="breadcumb-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li>Blog</li>
                 </ul>
             </div>

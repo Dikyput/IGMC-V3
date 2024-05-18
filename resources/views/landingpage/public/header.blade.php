@@ -8,7 +8,7 @@
                         <ul>
                             <li>
                                 @auth
-                                    <div class="header-notice">YOUR SALDO Rp. <a href="#">
+                                    <div class="header-notice">YOUR SALDO <i class="fa-solid fa-money-bill"></i> <a href="#">
                                             @if (Auth::check())
                                                 @php
                                                     $user = Auth::user();
@@ -24,7 +24,7 @@
                                     <div class="header-notice">Welcome to our <a href="#">IGMC</a></div>
                                 @endauth
                             </li>
-                            <li>
+                            {{-- <li>
                                 <div class="dropdown-link">
                                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink1"
                                         data-bs-toggle="dropdown" aria-expanded="false"><i
@@ -40,7 +40,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>
@@ -64,9 +64,9 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-auto">
                         <div class="header-logo">
-                            <a href="index.html">
-                                <span data-mask-src="assets/img/logo.svg" class="logo-mask"></span>
-                                <img src="assets/img/logo.svg" alt="IGMCV3">
+                            <a href="/">
+                                <span data-mask-src="assets/img/IGMCV3.svg" class="logo-mask"></span>
+                                <img src="assets/img/IGMCV3.svg" alt="IGMCV3">
                             </a>
                         </div>
                     </div>
