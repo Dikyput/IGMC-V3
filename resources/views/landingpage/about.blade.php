@@ -272,11 +272,6 @@
  Header Area
 ==============================-->
     @include('landingpage.public.header')
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <div class="breadcumb-wrapper " data-bg-src="assets/img/bg/breadcumb-bg.jpg">
         <div class="container">
             <div class="breadcumb-content">

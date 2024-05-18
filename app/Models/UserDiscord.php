@@ -34,6 +34,10 @@ class UserDiscord extends Model implements Authenticatable
     {
         return $this->belongsTo(User::class, 'id_discord', 'id_discord');
     }
+    public function tokendiscord()
+    {
+        return $this->belongsTo(Saldo::class, 'id_discord', 'id_discord');
+    }
 
     public function getRouteKeyName()
     {

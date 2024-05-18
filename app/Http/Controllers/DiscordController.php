@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Shop;
+use App\Models\Saldo;
 use App\Models\UserDiscord;
 use Auth;
 use Illuminate\Http\Request;
@@ -71,6 +72,11 @@ class DiscordController extends Controller
                 ],
                 [
                     'token_newplayer' => Str::random(10),
+                ]
+            );
+            Saldo::updateOrCreate(
+                [
+                    'id_discord' => $userData->id,
                 ]
             );
         } else {

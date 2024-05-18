@@ -8,15 +8,15 @@
                         <ul>
                             <li>
                                 @auth
-                                    <div class="header-notice">YOUR AKSES TOKEN INGAME <a href="#">
+                                    <div class="header-notice">YOUR SALDO Rp. <a href="#">
                                             @if (Auth::check())
                                                 @php
                                                     $user = Auth::user();
-                                                    $token = $user->iddiscord;
+                                                    $saldo = $user->tokendiscord;
                                                 @endphp
 
-                                                @if ($token)
-                                                    {{ $token->token_newplayer }}
+                                                @if ($saldo)
+                                                    {{ \App\Helpers\Rupiah::formatRupiah($saldo->nominal) }}
                                                 @endif
                                             @endif
                                         </a></div>
@@ -136,3 +136,8 @@
         </div>
     </div>
 </header>
+<br>
+<br>
+<br>
+<br>
+<br>
