@@ -10,6 +10,6 @@ class Rupiah {
          */
         public static function formatRupiah($value)
         {
-            return 'Rp ' . number_format($value, 2, ',', '.');
+            return 'IDR ' . number_format($value, 2, ',', '.');
         }
 }

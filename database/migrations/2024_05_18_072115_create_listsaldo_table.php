@@ -15,9 +15,9 @@ class CreateListsaldoTable extends Migration
     {
         Schema::create('listsaldo', function (Blueprint $table) {
             $table->id();
-            $table->string('id_saldo');
+            $table->string('id_saldo')->unique();
             $table->decimal('nominal', 15, 2)->default(0.00);
-            $table->decimal('harga', 15, 2)->default(0.00);
+            $table->integer('harga')->default(0);
             $table->timestamps();
         });
     }
