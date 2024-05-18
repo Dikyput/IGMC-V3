@@ -20,7 +20,7 @@ class CheckVerified
         if ($user && $user->isVerified == 0 && $request->route()->getName() !== 'verification') {
             return redirect()->route('verification');
         }
-        
+
         if ($user && $user->isVerified == 1 && $request->route()->getName() !== 'updateprofile') {
             return redirect()->route('updateprofile');
         }

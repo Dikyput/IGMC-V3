@@ -94,6 +94,9 @@ class DiscordController extends Controller
         if (!UserDiscord::where('id_discord', $userData->id)->value('isVerified')) {
             return redirect()->route("verification");
         } else {
+            if ($user && $user->isVerified == 1 && $request->route()->getName() !== 'updateprofile') {
+                return redirect()->route('updateprofile');
+            }
             return redirect()->route("dashboard");
         }
     }
@@ -122,25 +125,27 @@ class DiscordController extends Controller
     return redirect()->route('verification')->withErrors(['token' => 'The provided token is incorrect.']);
     }
 
-
     public function update_profile(Request $request)
     {
         $user = Auth::user();
-        if ($user->isVerified == 1) {
-            $user->iddiscord()->update([
-                'firstname' => $request->input('firstname'),
-                'lastname' => $request->input('lastname'),
-                'email' => $request->input('email'),
-                'nationaly' => $request->input('nationaly'),
-            ]);
-            $user->update([
-                'isVerified' => 2,
-            ]);
+        if ($user && $user->isVerified == 1) {
+            $userData = $user->iddiscord()->first();   
+            if ($userData) {
+                $userData->update([
+                    'firstname' => $request->input('firstname'),
+                    'lastname' => $request->input('lastname'),
+                    'email' => $request->input('email'),
+                    'nationaly' => $request->input('nationaly'),
+                ]);
 
-            return redirect()->route('dashboard')->with('status', 'Profile updated successfully!');
-        } else {
-            return redirect()->back()->with('error', 'You need to be verified to update your profile.');
+                $user->update([
+                    'isVerified' => 2,
+                ]);
+
+                return redirect()->route('dashboard')->with('status', 'Profile updated successfully!');
+            }
         }
+        return redirect()->route('updateprofile')->withErrors(['error' => 'Profile update failed.']);
     }
 
     

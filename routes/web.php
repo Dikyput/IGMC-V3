@@ -31,10 +31,10 @@ Route::middleware(['admin.auth'])->group(function () {
 });
 Route::get('verification', function () {return view('dashboard.auth.index');})->name('verification');
 Route::middleware(['auth'])->group(function () {
+    Route::post('updateprofile', [DiscordController::class, 'update_profile'])->name('update_profile');
     Route::post('verify-token', [DiscordController::class, 'verifyToken'])->name('verify-token');
     Route::middleware(['verified'])->group(function () {
         Route::get('updateprofile', function () {return view('dashboard.auth.up');})->name('updateprofile');
-        Route::post('updateprofile', [DiscordController::class, 'update_profile'])->name('update_profile');
         Route::get('dashboard', function () {return view('dashboard.home');})->name('dashboard');
         Route::get('shop', [ShopController::class, 'show'])->name('shop');
         Route::get('storecart/{id}', [ShopController::class, 'storecart']);

@@ -22,6 +22,7 @@ class ShopController extends Controller
      */
     public function show()
     {
+        
         if (Auth::check()) {
             $datashop = shop::orderBy('id')->distinct()->get();
             return view('dashboard.shop', compact('datashop'));
@@ -30,6 +31,9 @@ class ShopController extends Controller
     
     public function storecart(Request $request, $id)
     {
+        if ($user && $user->isVerified == 1 && $request->route()->getName() !== 'updateprofile') {
+            return redirect()->route('updateprofile');
+        }
         if (Auth::check()) {
         $product = Shop::find($id);
             if (!$product) {
