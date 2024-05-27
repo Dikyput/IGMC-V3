@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js " lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('assets/img/favicons/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
-    @include('landingpage.public.core')
+    @include('layouts.core')
     <style>
         .img-container {
             display: flex;
@@ -20,50 +21,44 @@
             align-items: center;
             max-height: 40%;
             padding: 1vh;
-    
-        .avatar-img {
-            min-width: 15%;
-            max-width: 40%;
-            height: auto;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-    
-        @media (max-width: 768px) {
-            .img-container {
-                height: auto;
-            }
-    
+
             .avatar-img {
-                max-width: 100px;
+                min-width: 15%;
+                max-width: 40%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: cover;
             }
-        }
+
+            @media (max-width: 768px) {
+                .img-container {
+                    height: auto;
+                }
+
+                .avatar-img {
+                    max-width: 100px;
+                }
+            }
     </style>
 </head>
+
 <body>
-    @include('landingpage.public.header')
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    @include('layouts.header')
     <div class="cursor-animation cursor-image"></div>
     <div class="container mt-2">
         <div class="th-comment-form">
             <div class="row">
-                    @if (Auth::check())
-                        @php
-                            $user = Auth::user();
-                            $discordUser = $user->discord;
-                            $discordId = $discordUser ? $discordUser->id_discord : 'N/A';
-                            $avatar = $discordUser ? $discordUser->getAvatarUrl() : 'N/A';
-                        @endphp
-                            <div class="img-container">
-                                <img src="{{ $avatar }}" alt="Avatar" class="avatar-img">
-                            </div>
-                    @endif
+                @if (Auth::check())
+                    @php
+                        $user = Auth::user();
+                        $discordUser = $user->discord;
+                        $discordId = $discordUser ? $discordUser->id_discord : 'N/A';
+                        $avatar = $discordUser ? $discordUser->getAvatarUrl() : 'N/A';
+                    @endphp
+                    <div class="img-container">
+                        <img src="{{ $avatar }}" alt="Avatar" class="avatar-img">
+                    </div>
+                @endif
             </div>
             <form method="POST" action="{{ route('update_profile') }}">
                 @csrf
@@ -102,6 +97,7 @@
         </svg>
     </div>
 
-    @include('landingpage.public.script')
+    @include('layouts.script')
 </body>
+
 </html>

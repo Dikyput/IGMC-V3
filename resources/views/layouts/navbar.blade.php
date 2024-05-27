@@ -11,9 +11,5 @@
             <a href="#crew-sec" class="menu-section-link"><i class="fa-solid fa-users"></i><span class="text">CREW
                     IGMC</span></a>
         </li>
-        {{-- <li>
-            <a href="#video-sec" class="menu-section-link"><i class="fal fa-headphones-simple"></i><span
-                    class="text">Video</span></a>
-        </li> --}}
     </ul>
 </nav>

@@ -13,13 +13,13 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('assets/img/favicons/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
-    @include('landingpage.public.core')
+    @include('layouts.core')
 </head>
 
 <body>
 
-    @include('landingpage.public.footer')
+    @include('layouts.footer')
 </body>
-@include('landingpage.public.script')
+@include('layouts.script')
 
 </html>

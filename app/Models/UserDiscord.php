@@ -16,6 +16,7 @@ class UserDiscord extends Model implements Authenticatable
         'username',
         'avatar',
         'locale',
+        'activated',
         'isVerified',
         'mfa_enabled',
         'refresh_token',

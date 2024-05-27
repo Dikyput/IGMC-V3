@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Models\Shop;
+use App\Models\Igmcoutfit;
 use App\Models\Saldo;
+use App\Models\User;
 use App\Models\UserDiscord;
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Str;
 use Session;
 use \GuzzleHttp;
 
@@ -64,14 +63,11 @@ class DiscordController extends Controller
             ]
         );
 
-        if (!User::where('id_discord', $userData->id)->exists() || !User::where('id_discord', $userData->id)->value('token_newplayer')) {
+        if (!User::where('id_discord', $userData->id)->exists()) {
             User::updateOrCreate(
                 [
                     'id_discord' => $userData->id,
                     'username' => $userData->username,
-                ],
-                [
-                    'token_newplayer' => Str::random(10),
                 ]
             );
             Saldo::updateOrCreate(
@@ -109,33 +105,42 @@ class DiscordController extends Controller
 
     public function verifyToken(Request $request)
     {
-    $request->validate([
-        'token' => 'required|string',
-    ]);
+        $request->validate([
+            'token' => 'required|string',
+        ]);
 
-    $userData = Auth::user();
-    $userData = User::find($userData->id_discord);
-    $inputToken = $request->token;
-    $updateprofilku = $userData->isTaken;
-    $tokenku = $userData->token_newplayer;
-    if ($tokenku === $inputToken) {
-        $userData = UserDiscord::updateOrCreate(
-            [
-                'id_discord' => $userData->id_discord,
-            ],
-            [
-                'isVerified' => 1,
-            ]);
-        return redirect()->route('updateprofile')->with('status', 'Your account has been verified!');
-    }
-    return redirect()->route('verification')->withErrors(['token' => 'The provided token is incorrect.']);
+        $userData = Auth::user();
+        $userData = User::find($userData->id_discord);
+        $inputToken = $request->token;
+        $updateprofilku = $userData->isTaken;
+        $tokenku = $userData->token_newplayer;
+        if ($tokenku === $inputToken) {
+            $userData = UserDiscord::updateOrCreate(
+                [
+                    'id_discord' => $userData->id_discord,
+                ],
+                [
+                    'isVerified' => 1,
+                ]);
+
+            $userData = Auth::user();
+            $userData = User::find($userData->id_discord);
+            $identifier = $userData->identifier;
+            Igmcoutfit::where('identifier', $identifier)->update(
+                [
+                    'id_discord' => $userData->id_discord,
+                ]
+            );
+            return redirect()->route('updateprofile')->with('status', 'Your account has been verified!');
+        }
+        return redirect()->route('verification')->withErrors(['token' => 'The provided token is incorrect.']);
     }
 
     public function update_profile(Request $request)
     {
         $user = Auth::user();
         if ($user && $user->isVerified == 1) {
-            $userData = $user->iddiscord()->first();   
+            $userData = $user->iddiscord()->first();
             if ($userData) {
                 $userData->update([
                     'firstname' => $request->input('firstname'),
@@ -154,7 +159,6 @@ class DiscordController extends Controller
         return redirect()->route('updateprofile')->withErrors(['error' => 'Profile update failed.']);
     }
 
-    
     public function logout(Request $request)
     {
         Auth::logout();

@@ -13,11 +13,10 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('assets/img/favicons/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
-    @include('landingpage.public.core')
+    @include('layouts.core')
 </head>
 
 <body>
-    @include('landingpage.public.header')
     <div class="cursor-animation cursor-image"></div>
     <div class="container">
         <div class="hero-style1 text-center">
@@ -40,7 +39,8 @@
                     <form method="POST" action="{{ route('verify-token') }}">
                         @csrf
                         <label for="token">{{ __('Verification Token') }}</label>
-                        <input id="token" type="text" class="form-control @error('token') is-invalid @enderror" name="token" required autofocus>
+                        <input id="token" type="text" class="form-control @error('token') is-invalid @enderror"
+                            name="token" required autofocus>
                         @error('token')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -48,26 +48,14 @@
                         @enderror
                 </div>
                 <div class="btn-group custom-anim-top wow animated" data-wow-duration="1.2s" data-wow-delay="0.7s">
-                    <button type="submit" class="th-btn">VALIDASI</div>
+                    <button type="submit" class="th-btn">VALIDASI
                     </button>
                 </div>
-            </form>
-                @include('landingpage.public.footer')
             </div>
+            </form>
         </div>
     </div>
-
-    
-    <!-- Scroll To Top -->
-    <div class="scroll-top">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-                style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
-            </path>
-        </svg>
-    </div>
-
-    @include('landingpage.public.script')
+    @include('layouts.script')
 </body>
 
 </html>

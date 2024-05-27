@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('assets/img/favicons/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
-    @include('landingpage.public.core')
+    @include('layouts.core')
 </head>
 
 <body>
@@ -271,7 +271,7 @@
     <!--==============================
  Header Area
 ==============================-->
-    @include('landingpage.public.header')
+    @include('layouts.header')
     <div class="breadcumb-wrapper " data-bg-src="assets/img/bg/breadcumb-bg.jpg">
         <div class="container">
             <div class="breadcumb-content">
@@ -952,8 +952,8 @@ Client Area
             </path>
         </svg>
     </div>
-    @include('landingpage.public.footer')
+    @include('layouts.footer')
 </body>
-@include('landingpage.public.script')
+@include('layouts.script')
 
 </html>
