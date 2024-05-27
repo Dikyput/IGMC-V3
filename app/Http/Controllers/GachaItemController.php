@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Igmcoutfit;
-use App\Models\User;
+use App\Models\ItemCloth;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -13,27 +13,45 @@ class GachaItemController extends Controller
     {
         return view('dashboard.add_data_texture');
     }
+
     public function store(Request $request)
     {
         $userData = Auth::user();
         $discordid = $userData->id_discord;
-        $request->validate([
-            'texture' => 'required|integer',
-            'img' => 'required|string',
-            'tipe' => 'required|string',
-            'drawable' => 'required|integer',
+        $data = $request->validate([
+            'id' => 'required|integer',
         ]);
 
+        $getdata = ItemCloth::where('id', $data['id'])->first();
+        if (!$getdata) {
+            return response()->json(['error' => 'Item not found'], 404);
+        }
+
+        $texture = $getdata->texture;
+        $img = $getdata->img;
+        $tipe = $getdata->tipe;
+        $drawable = $getdata->drawable;
+
         $newData = [
-            'texture' => $request->texture,
-            'img' => $request->img,
-            'tipe' => $request->tipe,
-            'drawable' => $request->drawable,
+            'texture' => $texture,
+            'img' => $img,
+            'tipe' => $tipe,
+            'drawable' => $drawable,
         ];
 
         $dataBaju = Igmcoutfit::firstOrCreate(['id_discord' => $discordid]);
         $adaData = json_decode($dataBaju->data, true);
         $adaData[] = $newData;
         $dataBaju->update(['data' => json_encode($adaData, JSON_UNESCAPED_SLASHES)]);
+
+        return response()->json(['success' => 'Item collected successfully']);
+    }
+
+    public function gachaitem()
+    {
+        if (Auth::check()) {
+            $items = ItemCloth::all();
+            return view('dashboard.cart.gacha', compact('items'));
+        }
     }
 }

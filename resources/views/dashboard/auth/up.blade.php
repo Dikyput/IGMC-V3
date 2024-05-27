@@ -21,24 +21,25 @@
             align-items: center;
             max-height: 40%;
             padding: 1vh;
+        }
+
+        .avatar-img {
+            min-width: 15%;
+            max-width: 40%;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .img-container {
+                height: auto;
+            }
 
             .avatar-img {
-                min-width: 15%;
-                max-width: 40%;
-                height: auto;
-                border-radius: 50%;
-                object-fit: cover;
+                max-width: 100px;
             }
-
-            @media (max-width: 768px) {
-                .img-container {
-                    height: auto;
-                }
-
-                .avatar-img {
-                    max-width: 100px;
-                }
-            }
+        }
     </style>
 </head>
 

@@ -48,27 +48,7 @@
                                                 fill-opacity="0.5" />
                                         </g>
                                     </g>
-                                    <defs>
-                                        <filter id="filter0_f_47_22" x="566" y="-533" width="1694" height="1694"
-                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
-                                                result="shape" />
-                                            <feGaussianBlur stdDeviation="280" result="effect1_foregroundBlur_47_22" />
-                                        </filter>
-                                        <filter id="filter01_f_47_22" x="-558" y="-617" width="1578" height="1578"
-                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
-                                                result="shape" />
-                                            <feGaussianBlur stdDeviation="280" result="effect1_foregroundBlur_47_22" />
-                                        </filter>
-                                        <linearGradient id="paint0_linear1_47_22" x1="0" y1="0"
-                                            x2="1600" y2="520" gradientUnits="userSpaceOnUse">
-                                            <stop offset="0" stop-color="var(--theme-color)" />
-                                            <stop offset="1" stop-color="var(--theme-color2)" />
-                                        </linearGradient>
-                                    </defs>
+
                                 </svg>
                                 <div class="verses-thumb d-xl-none d-block">
                                     <img src="{{ asset('assets/img/tournament/game-vs1.svg') }}" alt="tournament image">
@@ -112,8 +92,7 @@
                                     <path
                                         d="M1599 30V490C1599 506.016 1586.02 519 1570 519H1062.43C1054.74 519 1047.36 515.945 1041.92 510.506L1009.49 478.08C1003.68 472.266 995.795 469 987.574 469H612.426C604.205 469 596.32 472.266 590.506 478.08L558.08 510.506C552.641 515.945 545.265 519 537.574 519H30C13.9837 519 1 506.016 1 490V30C1 13.9837 13.9837 1 30 1H400H537.574C545.265 1 552.641 4.05535 558.08 9.4939L590.506 41.9203C596.32 47.7339 604.205 51 612.426 51H987.574C995.795 51 1003.68 47.7339 1009.49 41.9203L1041.92 9.4939C1047.36 4.05535 1054.74 1 1062.43 1H1200H1570C1586.02 1 1599 13.9837 1599 30Z"
                                         fill="black" stroke="url(#paint0_linear2_47_22)" stroke-width="2" />
-                                    <mask id="mask1_47_22" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
-                                        y="0">
+                                    <mask id="mask1_47_22" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0">
                                         <path
                                             d="M1600 490V30C1600 13.4315 1586.57 0 1570 0H1200H1062.43C1054.47 0 1046.84 3.1607 1041.21 8.7868L1008.79 41.2132C1003.16 46.8393 995.53 50 987.574 50H612.426C604.47 50 596.839 46.8393 591.213 41.2132L558.787 8.7868C553.161 3.16071 545.53 0 537.574 0H400H30C13.4315 0 0 13.4314 0 30V490C0 506.569 13.4315 520 30 520H537.574C545.53 520 553.161 516.839 558.787 511.213L591.213 478.787C596.839 473.161 604.47 470 612.426 470H987.574C995.53 470 1003.16 473.161 1008.79 478.787L1041.21 511.213C1046.84 516.839 1054.47 520 1062.43 520H1570C1586.57 520 1600 506.569 1600 490Z"
                                             fill="black" />
@@ -264,12 +243,10 @@
         <div class="slider-pagination"></div>
     </div>
 
-    <div class="header-sidebar-menu" id="navbar-collapse-toggle">
-        @include('layouts.navbar')
-    </div>
+
     <!--==============================
-    Marquee Area
-    ==============================-->
+                Marquee Area
+                ==============================-->
     <div class="marquee-area-1 bg-repeat  overflow-hidden" data-bg-src="assets/img/bg/jiji-bg.png">
         <div class="container-fluid">
             <div class="swiper th-slider" id="marqueeSlider1"
@@ -444,8 +421,8 @@
     </div>
 
     <!--==============================
-    Game Area
-    ==============================-->
+                Game Area
+                ==============================-->
     <section class="overflow-hidden">
         <div class="container th-container2">
             <div class="game-sec-wrap1 space" data-bg-src="assets/img/bg/game-sec1-bg.png">
@@ -603,8 +580,8 @@
             </div>
         </div>
     </section><!--==============================
-    Feature Area
-    ==============================-->
+                Feature Area
+                ==============================-->
 
     <section class="space bg-top-center" data-bg-src="assets/img/bg/tournament-sec1-bg.png">
         <div class="container">
@@ -708,8 +685,8 @@
             </div>
         </div>
     </section> <!--==============================
-    Gallery Area
-    ==============================-->
+                Gallery Area
+                ==============================-->
     <div class="container-fluid p-0">
         <div class="gallery-area-1 overflow-hidden text-center">
             <div class="slider-area gallery-slider1">
@@ -717,8 +694,8 @@
                     data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}},"effect":"coverflow","coverflowEffect":{"rotate":"0","stretch":"0","depth":"150","modifier":"1"},"centeredSlides":"true"}'>
                     <div class="swiper-wrapper">
                         <!--==============================
-    Gallery Area
-    ==============================-->
+                Gallery Area
+                ==============================-->
                         <div class="swiper-slide gallery-wrap1">
                             <div class="th-video">
                                 <img src="{{ asset('assets/img/video/1-1.png') }}" alt="img">
@@ -776,8 +753,8 @@
             </div>
         </div>
     </div><!--==============================
-    Team Area
-    ==============================-->
+                Team Area
+                ==============================-->
     <section class="team-sec-1 space">
         <div class="team-shape1-1 shape-mockup" data-top="0" data-right="0"><img
                 src="{{ asset('assets/img/bg/team-sec1-bg.png') }}" alt="img"></div>
@@ -826,8 +803,8 @@
         </div>
     </section>
     <!--==============================
-    Cta Area
-    ==============================-->
+                Cta Area
+                ==============================-->
     <div class="container th-container4">
         <div class="cta-area-1">
             <div class="cta-bg-shape-border">
@@ -873,8 +850,8 @@
         </div>
     </div>
     <!--==============================
-    Product Area
-    ==============================-->
+                Product Area
+                ==============================-->
     <section class="space">
         <div class="container">
             <div class="row justify-content-between align-items-center" id="crew-sec">
@@ -937,8 +914,8 @@
     </section>
 
     <!--==============================
-    Client Area
-    ==============================-->
+                Client Area
+                ==============================-->
     <div class="client-area-1 overflow-hidden space">
         <div class="container-fluid p-0">
             <div class="swiper th-slider client-slider1"

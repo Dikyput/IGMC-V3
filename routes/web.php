@@ -47,7 +47,9 @@ Route::middleware(['auth'])->group(function () {
         Route::get('shop', [ShopController::class, 'show'])->name('shop');
         Route::get('storecart/{id}', [ShopController::class, 'storecart']);
         Route::get('cobaitem', [GachaItemController::class, 'cobaitem'])->name('cobaitem');
+        Route::get('myinventory', [GachaItemController::class, 'gachaitem'])->name('myinventory');
         Route::post('/add-data-texture', [GachaItemController::class, 'store'])->name('add-data-texture');
+        Route::post('/colectitem', [GachaItemController::class, 'store'])->name('colectitem');
     });
 });
 Route::get('keluar', [DashboardController::class, 'keluar'])->name('keluar');

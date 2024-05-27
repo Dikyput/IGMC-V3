@@ -74,27 +74,27 @@ Sidemenu
         <div class="widget footer-widget">
             <div class="th-widget-about">
                 <div class="about-logo">
-                    <a href="index.html">
-                        <span data-mask-src="assets/img/logo.svg" class="logo-mask"></span>
-                        <img src="assets/img/logo.svg" alt="Bame">
-                    </a>
-                </div>
-                <p class="about-text"> Beyond esports tournaments, include a broader calendar of gaming events,
-                    conferences, and conventions.</p>
-                <h3 class="widget_title">Follow <span class="text-theme">With Us:</span></h3>
-                <div class="th-widget-contact">
-                    <div class="th-social style-mask">
-                        <a class="facebook" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a class="twitter" href="https://www.twitter.com/"><img src="assets/img/icon/x-twitter-icon.svg"
-                                alt="icon"></a>
-                        <a class="instagram" href="https://www.instagram.com/">
-                            <img src="assets/img/icon/instagram-icon.svg" alt="icon">
-                        </a>
-                        <a class="linkedin" href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-                        <a class="google-play" href="https://www.google.com/">
-                            <img src="assets/img/icon/google-playstore-icon.svg" alt="icon">
-                        </a>
-                    </div>
+                    @auth
+                        @if (Auth::check())
+                            @php
+                                $user = Auth::user();
+                                $id = $user->id_discord;
+                                $username = $user->username;
+                                $avatar = $user->avatar;
+                                $saldo = $user->tokendiscord;
+                            @endphp
+                        @endif
+                        <img class="rounded-20"
+                            src="https://cdn.discordapp.com/avatars/{{ $id }}/{{ $avatar }}.png">
+                        <br>
+                        <br>
+                        <h3 class="widget_title">Username <span class="text-theme">{{ $username }}</span></h3>
+                        <h3 class="widget_title">SALDO <i class="fa-solid fa-money-bill"></i> <span
+                                class="text-theme">{{ \App\Helpers\Rupiah::formatRupiah($saldo->nominal) }}</span></h3>
+                    @else
+                        <span data-mask-src="assets/img/IGMCV3.svg" class="logo-mask"></span>
+                        <img src="assets/img/IGMCV3.svg" alt="IGMC">
+                    @endauth
                 </div>
             </div>
         </div>
@@ -103,8 +103,7 @@ Sidemenu
             <div class="recent-post-wrap">
                 <div class="recent-post">
                     <div class="media-img">
-                        <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-1.jpg"
-                                alt="Blog Image"></a>
+                        <a href="blog-details.html"><img src="assets/img/blog/recent-post-1-1.jpg" alt="Blog Image"></a>
                     </div>
                     <div class="media-body">
                         <h4 class="post-title"><a class="text-inherit" href="blog-details.html">A Day in the Life
@@ -168,8 +167,8 @@ Mobile Menu
     <div class="th-menu-area text-center">
         <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
         <div class="mobile-logo">
-            <a href="index.html"><span data-mask-src="assets/img/logo.svg" class="logo-mask"></span><img
-                    src="assets/img/logo.svg" alt="Bame"></a>
+            <a href="index.html"><span data-mask-src="assets/img/IGMCV3.svg" class="logo-mask"></span><img
+                    src="assets/img/IGMCV3.svg" alt="igmcv3"></a>
         </div>
         <div class="th-mobile-menu">
             <ul>
@@ -204,20 +203,14 @@ Mobile Menu
                         <li class="menu-item-has-children">
                             <a href="#">Shop</a>
                             <ul class="sub-menu">
-                                <li><a href="shop.html">Shop</a></li>
-                                <li><a href="shop-details.html">Shop Details</a></li>
-                                <li><a href="cart.html">Cart Page</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                                <li><a href="wishlist.html">Wishlist</a></li>
+                                <li><a href="{{ route('shop') }}">Shop</a></li>
+                                <li><a href="{{ route('mycart') }}">My Cart</a></li>
                             </ul>
                         </li>
-                        <li><a href="team.html">Players</a></li>
-                        <li><a href="team-details.html">Players Details</a></li>
-                        <li><a href="game.html">Game</a></li>
-                        <li><a href="game-details.html">Game Details</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="point-table.html">Point Table</a></li>
-                        <li><a href="error.html">Error Page</a></li>
+                        <li><a href="{{ route('myinventory') }}">My Inventory</a></li>
+                        <li><a href="#">Players</a></li>
+                        <li><a href="#">Players Detail</a></li>
+                        <li><a href="#">Ranking</a></li>
                     </ul>
                 </li>
 
@@ -317,12 +310,10 @@ Header Area
                                                 <a href="#">Shop</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="{{ route('shop') }}">Shop</a></li>
-                                                    <li><a href="#">Shop Details</a></li>
-                                                    <li><a href="#">Cart Page</a></li>
-                                                    <li><a href="#">Checkout</a></li>
-                                                    <li><a href="#">Wishlist</a></li>
+                                                    <li><a href="{{ route('mycart') }}">My Cart</a></li>
                                                 </ul>
                                             </li>
+                                            <li><a href="{{ route('myinventory') }}">My Inventory</a></li>
                                             <li><a href="#">Players</a></li>
                                             <li><a href="#">Players Detail</a></li>
                                             <li><a href="#">Ranking</a></li>
@@ -362,85 +353,3 @@ Header Area
             <div class="logo-bg"></div>
         </div>
     </div>
-
-    {{-- <header class="th-header header-layout1">
-    
-    <div class="sticky-wrapper">
-        <!-- Main Menu Area -->
-        <div class="menu-area">
-            <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-auto">
-                        <div class="header-logo">
-                            <a href="/">
-                                <span data-mask-src="assets/img/IGMCV3.svg" class="logo-mask"></span>
-                                <img src="assets/img/IGMCV3.svg" alt="IGMCV3">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-auto">
-                        <nav class="main-menu d-none d-lg-inline-block">
-                            <ul>
-                                <li><a href="{{ route('show') }}">HOME</a></li>
-                                <li><a href="{{ route('about') }}">ABOUT US</a></li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">TOURNAMENT</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="{{ route('tournament') }}">Tournament</a></li>
-                                        <li><a href="{{ route('tournamentdetails') }}">Tournament Details</a></li>
-                                    </ul>
-                                </li>
-                                @auth
-                                    <li class="menu-item-has-children">
-                                        <a href="#">PAGES</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item-has-children">
-                                                <a href="#">Shop</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="{{ route('shop') }}">Shop</a></li>
-                                                    <li><a href="#">Shop Details</a></li>
-                                                    <li><a href="#">Cart Page</a></li>
-                                                    <li><a href="#">Checkout</a></li>
-                                                    <li><a href="#">Wishlist</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Players</a></li>
-                                            <li><a href="#">Players Detail</a></li>
-                                            <li><a href="#">Ranking</a></li>
-                                        </ul>
-                                    </li>
-                                @endauth
-                            </ul>
-                        </nav>
-                        <div class="header-button d-flex d-lg-none">
-                            <button type="button" class="th-menu-toggle"><span class="btn-border"></span><i
-                                    class="far fa-bars"></i></button>
-                        </div>
-                    </div>
-                    <div class="col-auto d-none d-xl-block">
-                        <div class="header-button">
-                            <button type="button" class="simple-icon searchBoxToggler"><i
-                                    class="far fa-search"></i></button>
-                            <button type="button" class="simple-icon sideMenuInfo">
-                                <i class="fa-solid fa-bars"></i>
-                            </button>
-                            <div class="d-xxl-block d-none">
-                                @auth
-                                    <a href="/keluar" class="th-btn">
-                                        LOGOUT</a>
-                                    <!-- https://discord.com/oauth2/authorize?client_id=1229900010385313842&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Flogin&scope=identify+guilds -->
-                                @else
-                                    <!-- <a href="https://discord.com/oauth2/authorize?client_id={{ env('DISCORD_CLIENT_ID') }}&redirect_uri={{ env('DISCORD_REDIRECT_URI') }}&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Flogin&scope=identify+guilds" -->
-                                    <a href="https://discord.com/oauth2/authorize?client_id={{ env('DISCORD_CLIENT_ID') }}&redirect_uri={{ env('DISCORD_REDIRECT_URI') }}&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Flogin&scope=identify+guilds"
-                                        class="th-btn">
-                                        LOGIN WITH DISCORD</a>
-                                @endauth
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="logo-bg"></div>
-        </div>
-    </div>
-</header> --}}
