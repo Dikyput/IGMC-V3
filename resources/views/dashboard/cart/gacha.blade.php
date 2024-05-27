@@ -21,7 +21,7 @@
         }
 
         .gacha-item img {
-            width: 100%;
+            width: 70%;
             border-radius: 10px;
         }
 
@@ -41,11 +41,13 @@
                             <div class="gacha-item" data-id="{{ $item->id }}" data-name="{{ $item->name }}"
                                 data-img="{{ url($item->img) }}" data-tipe="{{ $item->tipe }}">
                                 <img src="{{ url($item->img) }}" alt="{{ $item->name }}">
-                                <p>{{ $item->name }}</p>
                             </div>
                         @endforeach
                     </div>
-                    <button class="spin-button">Spin</button>
+                    <div class="btn-group wow animated" data-wow-duration="1.2s" data-wow-delay="0.7s">
+                        <button type="submit" class="th-btn spin-button">Spin
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,6 +77,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -84,7 +87,7 @@
             const items = document.querySelectorAll('.gacha-item');
             const spinButton = document.querySelector('.spin-button');
             const itemWidth = items[0].clientWidth;
-            const spinDuration = 500;
+            const spinDuration = 100;
             let currentIndex = 0;
             let isSpinning = false;
             let selectedItem = null;
@@ -105,6 +108,7 @@
                         const selectedTipe = selectedItem.getAttribute('data-tipe');
                         const selectedImg = selectedItem.getAttribute('data-img');
 
+
                         document.querySelector('.product-title').textContent = 'Cloth ' +
                             selectedName + ' Tipe ' + selectedTipe;
                         document.querySelector('.product-big-img img').src = selectedImg;
@@ -113,7 +117,9 @@
                             items: {
                                 src: '#Testing'
                             },
-                            type: 'inline'
+                            type: 'inline',
+                            closeOnBgClick: false,
+                            enableEscapeKey: false
                         });
                         isSpinning = false;
                     }, totalSpinDuration);
@@ -127,9 +133,6 @@
             document.querySelector('.collect-button').addEventListener('click', function() {
                 if (selectedItem) {
                     const id = selectedItem.getAttribute('data-id');
-
-                    console.log("Collecting item with id_cloth:", id); // Debugging line
-
                     $.ajax({
                         url: "{{ route('colectitem') }}",
                         type: 'POST',
@@ -137,13 +140,13 @@
                             id: id
                         },
                         success: function(response) {
-                            console.log("Success response:", response); // Debugging line
+                            console.log("Success response:", response);
                             alert('Item collected successfully!');
                             $.magnificPopup.close();
                         },
                         error: function(xhr, status, error) {
                             console.error("Error response:", xhr
-                                .responseText); // Debugging line
+                                .responseText);
                             alert('Error collecting item. Please try again.' + id);
                         }
                     });
