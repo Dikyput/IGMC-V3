@@ -15,7 +15,8 @@ class AdminController extends Controller
     public function dashboardadmin()
     {
         if (Auth::guard('admin')) {
-            return view('admin.tes');
+            $title = 'Admin';
+            return view('admin.layouts.dashboard')->with('title', $title);
         }
     }
 
@@ -27,7 +28,7 @@ class AdminController extends Controller
         ]);
         $credentials = $request->only('email', 'password');
         if (Auth::guard('admin')->attempt($credentials)) {
-            return redirect()->intended('/admin');
+            return redirect()->intended('/admin/dashboard');
         }
         return redirect()->intended('/admin/login');
     }

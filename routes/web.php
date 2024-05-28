@@ -31,7 +31,7 @@ Route::get('/admin/login', [AdminController::class, 'adminlogin'])->name('adminl
 Route::post('/admin/login', [AdminController::class, 'loginform'])->name('loginform');
 
 Route::middleware(['admin.auth'])->group(function () {
-    Route::get('/admin', [AdminController::class, 'dashboardadmin']);
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboardadmin']);
     Route::post('/keluaradmin', [AdminController::class, 'keluaradmin'])->name('keluaradmin');
 });
 Route::get('verification', function () {return view('dashboard.auth.index');})->name('verification');
