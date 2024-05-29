@@ -51,8 +51,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function usertoken()
+    public function useriddiscord()
     {
         return $this->hasOne(UserDiscord::class, 'id_discord', 'id_discord');
+    }
+
+    public function activated()
+    {
+        return $this->hasOne(UserDiscord::class, 'id_discord', 'id_discord');
+    }
+
+    public function SaldoUser()
+    {
+        return $this->hasOne(Saldo::class, 'id_discord', 'id_discord');
     }
 }

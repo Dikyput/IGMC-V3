@@ -1,12 +1,16 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClothController;
+use App\Http\Controllers\CrewController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DiscordController;
 use App\Http\Controllers\GachaItemController;
+use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\TopupsaldoController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Middleware\AdminAuthMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,11 +33,27 @@ Route::get('/tournamentdetails', [DashboardController::class, 'tournamentdetails
 
 Route::get('/admin/login', [AdminController::class, 'adminlogin'])->name('adminlogin');
 Route::post('/admin/login', [AdminController::class, 'loginform'])->name('loginform');
-
-Route::middleware(['admin.auth'])->group(function () {
+Route::middleware(AdminAuthMiddleware::class)->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboardadmin']);
-    Route::post('/keluaradmin', [AdminController::class, 'keluaradmin'])->name('keluaradmin');
+    Route::get('/keluaradmin', [AdminController::class, 'keluaradmin'])->name('keluaradmin');
+
+    Route::get('/admin/data-player', [PlayerController::class, 'index']);
+    Route::get('/admin/data-player/{id}/edit', [PlayerController::class, 'edit']);
+    Route::put('/admin/data-player-update/{id}', [PlayerController::class, 'update']);
+    Route::get('/admin/data-player/{id}/delete', [PlayerController::class, 'destroy']);
+
+    Route::get('/admin/data-crew', [CrewController::class, 'index']);
+    Route::get('/admin/data-crew-add', [CrewController::class, 'create']);
+    Route::post('admin/data-crew-insert', [CrewController::class, 'store']);
+    Route::get('/admin/data-crew/{id}/edit', [CrewController::class, 'edit']);
+    Route::put('/admin/data-crew-update/{id}', [CrewController::class, 'update']);
+    Route::get('/admin/data-crew/{id}/delete', [CrewController::class, 'destroy']);
+
+    Route::get('/admin/data-penjualan', [AdminController::class, 'penjualan']);
+    Route::get('/admin/data-cloth-add', [ClothController::class, 'create']);
+    Route::post('/admin/data-cloth-insert', [ClothController::class, 'store']);
 });
+
 Route::get('verification', function () {return view('dashboard.auth.index');})->name('verification');
 Route::middleware(['auth'])->group(function () {
     Route::post('updateprofile', [DiscordController::class, 'update_profile'])->name('update_profile');

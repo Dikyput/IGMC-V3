@@ -245,8 +245,8 @@
 
 
     <!--==============================
-                Marquee Area
-                ==============================-->
+                                Marquee Area
+                                ==============================-->
     <div class="marquee-area-1 bg-repeat  overflow-hidden" data-bg-src="assets/img/bg/jiji-bg.png">
         <div class="container-fluid">
             <div class="swiper th-slider" id="marqueeSlider1"
@@ -421,8 +421,8 @@
     </div>
 
     <!--==============================
-                Game Area
-                ==============================-->
+                                Game Area
+                                ==============================-->
     <section class="overflow-hidden">
         <div class="container th-container2">
             <div class="game-sec-wrap1 space" data-bg-src="assets/img/bg/game-sec1-bg.png">
@@ -580,8 +580,8 @@
             </div>
         </div>
     </section><!--==============================
-                Feature Area
-                ==============================-->
+                                Feature Area
+                                ==============================-->
 
     <section class="space bg-top-center" data-bg-src="assets/img/bg/tournament-sec1-bg.png">
         <div class="container">
@@ -685,8 +685,8 @@
             </div>
         </div>
     </section> <!--==============================
-                Gallery Area
-                ==============================-->
+                                Gallery Area
+                                ==============================-->
     <div class="container-fluid p-0">
         <div class="gallery-area-1 overflow-hidden text-center">
             <div class="slider-area gallery-slider1">
@@ -694,8 +694,8 @@
                     data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}},"effect":"coverflow","coverflowEffect":{"rotate":"0","stretch":"0","depth":"150","modifier":"1"},"centeredSlides":"true"}'>
                     <div class="swiper-wrapper">
                         <!--==============================
-                Gallery Area
-                ==============================-->
+                                Gallery Area
+                                ==============================-->
                         <div class="swiper-slide gallery-wrap1">
                             <div class="th-video">
                                 <img src="{{ asset('assets/img/video/1-1.png') }}" alt="img">
@@ -753,8 +753,8 @@
             </div>
         </div>
     </div><!--==============================
-                Team Area
-                ==============================-->
+                                Team Area
+                                ==============================-->
     <section class="team-sec-1 space">
         <div class="team-shape1-1 shape-mockup" data-top="0" data-right="0"><img
                 src="{{ asset('assets/img/bg/team-sec1-bg.png') }}" alt="img"></div>
@@ -803,8 +803,8 @@
         </div>
     </section>
     <!--==============================
-                Cta Area
-                ==============================-->
+                                Cta Area
+                                ==============================-->
     <div class="container th-container4">
         <div class="cta-area-1">
             <div class="cta-bg-shape-border">
@@ -850,8 +850,8 @@
         </div>
     </div>
     <!--==============================
-                Product Area
-                ==============================-->
+                                Product Area
+                                ==============================-->
     <section class="space">
         <div class="container">
             <div class="row justify-content-between align-items-center" id="crew-sec">
@@ -888,7 +888,7 @@
                                     <h5 class="box-title"><a href="#">{{ $datacrew->roles }}</a></h5>
                                     <div class="img-wrap">
                                         <div class="team-img">
-                                            <img src="{{ asset('assets/img/team/1-1.png') }}" alt="Team">
+                                            <img src=" {{ asset('assets') }}/crew/{{ $datacrew->foto }}" alt="Team">
                                         </div>
                                         <img class="game-logo" src="{{ asset('assets/img/team/game-logo1-1.png') }}"
                                             alt="Team">
@@ -914,8 +914,8 @@
     </section>
 
     <!--==============================
-                Client Area
-                ==============================-->
+                                Client Area
+                                ==============================-->
     <div class="client-area-1 overflow-hidden space">
         <div class="container-fluid p-0">
             <div class="swiper th-slider client-slider1"
