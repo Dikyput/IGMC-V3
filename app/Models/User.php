@@ -15,9 +15,8 @@ class User extends Authenticatable
      *
      * @var array
      */
-
-    protected $primaryKey = 'id_discord';
-
+    protected $table = 'users';
+    protected $primaryKey = 'token_newplayer';
     protected $fillable = [
         'id_discord',
         'username',

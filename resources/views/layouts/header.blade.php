@@ -89,7 +89,7 @@ Sidemenu
                         <br>
                         <br>
                         <h3 class="widget_title">Username <span class="text-theme">{{ $username }}</span></h3>
-                        <h3 class="widget_title">SALDO <i class="fa-solid fa-money-bill"></i> <span
+                        <h3 class="widget_title">BALANCE <i class="fa-solid fa-money-bill"></i> <span
                                 class="text-theme">{{ \App\Helpers\Rupiah::formatRupiah($saldo->nominal) }}</span></h3>
                     @else
                         <span data-mask-src="assets/img/IGMCV3.svg" class="logo-mask"></span>
@@ -244,7 +244,7 @@ Header Area
                         <ul>
                             <li>
                                 @auth
-                                    <div class="header-notice">YOUR SALDO <i class="fa-solid fa-money-bill"></i> <a
+                                    <div class="header-notice">YOUR BALANCE <i class="fa-solid fa-money-bill"></i> <a
                                             href="#">
                                             @if (Auth::check())
                                                 @php

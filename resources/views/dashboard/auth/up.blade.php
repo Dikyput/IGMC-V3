@@ -63,14 +63,11 @@
             </div>
             <form method="POST" action="{{ route('update_profile') }}">
                 @csrf
+
                 <div class="row">
-                    <div class="col-md-6 form-group style-border">
-                        <input type="text" name="firstname" placeholder="Firs Name*" class="form-control" required>
+                    <div class="col-md-12 form-group style-border">
+                        <input type="text" name="username" placeholder="Username*" class="form-control" required>
                         <i class="far fa-user"></i>
-                    </div>
-                    <div class="col-md-6 form-group style-border">
-                        <input type="text" name="lastname" placeholder="Last Name*" class="form-control" required>
-                        <i class="far fa-envelope"></i>
                     </div>
                 </div>
                 <div class="row">
@@ -79,12 +76,26 @@
                         <i class="far fa-envelope"></i>
                     </div>
                     <div class="col-md-8 form-group style-border">
-                        <input type="text" name="nationaly" placeholder="Your Nationaly*" class="form-control">
-                        <i class="far fa-flag"></i>
+                        <select class="form-select" id="inputGroupSelect01" name="nationaly">
+                            <option selected value="Indonesia">Indonesia</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Philipine">Philipines</option>
+                            <option value="India">India</option>
+                            <option value="Republic of Pakistan">Republic of Pakistan</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="South Korea">South Korea</option>
+                            <option value="Japan">Japan</option>
+                        </select>
                     </div>
                 </div>
-                <div class="col-12 form-group mb-0">
-                    <button type="submit" class="th-btn">SAVE PROFILE <i class="far fa-arrow-right ms-2"></i></button>
+                <div class="row">
+                    <div class="col-3 form-group mb-0">
+                        <button type="submit" class="th-btn">SAVE PROFILE <i
+                                class="far fa-arrow-right ms-2"></i></button>
+                    </div>
                 </div>
             </form>
         </div>
