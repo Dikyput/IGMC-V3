@@ -64,11 +64,10 @@
             @endforeach
         </div>
     </div>
+    @include('layouts.script')
     <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-p1W9RBa616-_sWXB"></script>
-    <script type="text/javascript">
+    <script>
         $(document).ready(function() {
-
-
             $('.pay-button').click(function(event) {
                 event.preventDefault();
                 var snapToken = $(this).data('snap-token');

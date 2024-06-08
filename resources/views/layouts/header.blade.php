@@ -267,10 +267,10 @@ Header Area
                 <div class="col-auto">
                     <div class="header-links">
                         <ul>
-                            <li><a href="https://discord.gg/GrgJSJB94Y">Discord</a></li>
-                            <li><a href="https://www.tiktok.com/@igmc2024">Tiktok</a></li>
-                            <li><a href="https://www.youtube.com/@IGMC2024">Youtube</a></li>
-                            <li><a href="https://www.instagram.com/igmc2024/">Instagram</a></li>
+                            <li><a target="_blank" href="https://discord.gg/GrgJSJB94Y">Discord</a></li>
+                            <li><a target="_blank" href="https://www.tiktok.com/@igmc2024">Tiktok</a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/@IGMC2024">Youtube</a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/igmc2024/">Instagram</a></li>
                         </ul>
                     </div>
                 </div>
@@ -319,6 +319,7 @@ Header Area
                                             <li><a href="#">Ranking</a></li>
                                         </ul>
                                     </li>
+                                    <li><a href="{{ route('topup-saldo') }}">TOP-UP SALDO</a></li>
                                 @endauth
                             </ul>
                         </nav>
@@ -340,9 +341,10 @@ Header Area
                                         LOGOUT</a>
                                     <!-- https://discord.com/oauth2/authorize?client_id=1229900010385313842&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Flogin&scope=identify+guilds -->
                                 @else
-                                    <!-- <a href="https://discord.com/oauth2/authorize?client_id={{ env('DISCORD_CLIENT_ID') }}&redirect_uri={{ env('DISCORD_REDIRECT_URI') }}&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Flogin&scope=identify+guilds" -->
-                                    <a href="https://discord.com/oauth2/authorize?client_id={{ env('DISCORD_CLIENT_ID') }}&redirect_uri={{ env('DISCORD_REDIRECT_URI') }}&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Flogin&scope=identify+guilds"
+                                    <a href="https://discord.com/oauth2/authorize?client_id=1180166852702372001&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Flogin&scope=identify+guilds"
                                         class="th-btn">
+                                        {{-- <a href="https://discord.com/oauth2/authorize?client_id=1180166852702372001&response_type=code&redirect_uri=https%3A%2F%2Figmcv3.com%2Fapi%2Flogin&scope=identify+guilds"
+                                        class="th-btn"> --}}
                                         LOGIN WITH DISCORD</a>
                                 @endauth
                             </div>

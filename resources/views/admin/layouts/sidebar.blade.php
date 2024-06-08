@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse w-auto " id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-white {{ $title == 'Dashboard' ? 'bg-gradient-primary ' : '' }} "
+                <a class="nav-link text-white {{ $title == 'Dashboard' ? 'bg-gradient-warning ' : '' }} "
                     href="/admin/dashboard">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">dashboard</i>
@@ -23,8 +23,51 @@
                     <span class="nav-link-text ms-1">Dashboard</span>
                 </a>
             </li>
+
             <li class="nav-item">
-                <a class="nav-link text-white {{ $title == 'Data Player' ? 'bg-gradient-primary ' : '' }}"
+                <a class="nav-link text-white collapsed" href="#submenuExample" data-bs-toggle="collapse"
+                    aria-expanded="false">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">layers</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Data Ui Page</span>
+                </a>
+                <div class="collapse" id="submenuExample">
+                    <ul class="nav ms-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-white {{ $title == 'Data Ui Home' ? 'bg-gradient-warning' : '' }}"
+                                href="/admin/data-uipagehome">
+                                <div
+                                    class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                                    <i class="material-icons opacity-10">subdirectory_arrow_right</i>
+                                </div>
+                                <span class="nav-link-text ms-1">Home</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white {{ $title == 'Data Tournamen' ? 'bg-gradient-warning ' : '' }}"
+                    href="/admin/data-turnamen">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">groups</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Data Turnamen</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ $title == 'Data Player IGMC' ? 'bg-gradient-warning ' : '' }}"
+                    href="/admin/data-playerigmc">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">groups</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Data Player IGMC</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ $title == 'Data Player' ? 'bg-gradient-warning ' : '' }}"
                     href="/admin/data-player">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">groups</i>
@@ -33,7 +76,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white {{ $title == 'Data Crew' ? 'bg-gradient-primary ' : '' }} "
+                <a class="nav-link text-white {{ $title == 'Data Crew' ? 'bg-gradient-warning ' : '' }} "
                     href="/admin/data-crew">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">groups</i>
@@ -42,7 +85,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white {{ $title == 'Data Penjualan' ? 'bg-gradient-primary ' : '' }}"
+                <a class="nav-link text-white {{ $title == 'Data Penjualan' ? 'bg-gradient-warning ' : '' }}"
                     href="/admin/data-penjualan">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">groups</i>
@@ -50,6 +93,11 @@
                     <span class="nav-link-text ms-1">Data Penjualan</span>
                 </a>
             </li>
+
+
+
+
+
         </ul>
     </div>
     <div class="sidenav-footer position-absolute w-100 bottom-0 ">

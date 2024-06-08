@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class AdminAuthMiddleware
 {
@@ -17,10 +18,14 @@ class AdminAuthMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::guard('admin')->check()) {
-            return $next($request);
+        if (!Auth::guard('admin')->check()) {
+            return redirect()->route('adminlogin');
         }
 
-        return redirect()->route('adminlogin');
+        if (Session::has('expired')) {
+            app()->call('App\Http\Controllers\AdminController@sessionExpired');
+        }
+
+        return $next($request);
     }
 }

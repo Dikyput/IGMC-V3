@@ -6,10 +6,13 @@ use App\Http\Controllers\CrewController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DiscordController;
 use App\Http\Controllers\GachaItemController;
+use App\Http\Controllers\JadwalTournamenController;
 use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\PlayerIgmc2024Controller;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\TopupsaldoController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\UiPageController;
 use App\Http\Middleware\AdminAuthMiddleware;
 use Illuminate\Support\Facades\Route;
 
@@ -48,6 +51,25 @@ Route::middleware(AdminAuthMiddleware::class)->group(function () {
     Route::get('/admin/data-crew/{id}/edit', [CrewController::class, 'edit']);
     Route::put('/admin/data-crew-update/{id}', [CrewController::class, 'update']);
     Route::get('/admin/data-crew/{id}/delete', [CrewController::class, 'destroy']);
+
+    Route::get('/admin/data-playerigmc', [PlayerIgmc2024Controller::class, 'index']);
+    Route::get('/admin/data-playerigmc-add', [PlayerIgmc2024Controller::class, 'create']);
+    Route::post('admin/data-playerigmc-insert', [PlayerIgmc2024Controller::class, 'store']);
+    Route::get('/admin/data-playerigmc/{id}/edit', [PlayerIgmc2024Controller::class, 'edit']);
+    Route::put('/admin/data-playerigmc-update/{id}', [PlayerIgmc2024Controller::class, 'update']);
+    Route::get('/admin/data-playerigmc/{id}/delete', [PlayerIgmc2024Controller::class, 'destroy']);
+
+    Route::get('/admin/data-turnamen', [JadwalTournamenController::class, 'index']);
+    Route::get('/admin/data-turnamen-add', [JadwalTournamenController::class, 'create']);
+    Route::post('admin/data-turnamen-insert', [JadwalTournamenController::class, 'store']);
+    Route::get('/admin/data-turnamen/{id}/edit', [JadwalTournamenController::class, 'edit']);
+    Route::put('/admin/data-turnamen-update/{id}', [JadwalTournamenController::class, 'update']);
+    Route::get('/admin/data-turnamen/{id}/delete', [JadwalTournamenController::class, 'destroy']);
+
+    Route::get('admin/data-uipagehome', [UiPageController::class, 'uipagehome']);
+    Route::get('admin/data-uipagehome-insert', [UiPageController::class, 'uipagehomestore']);
+    Route::get('admin/data-uipagehome/{id}/edit', [UiPageController::class, 'uipagehomeedit']);
+    Route::put('admin/data-uipagehome-update/{id}', [UiPageController::class, 'uipagehomeupdate']);
 
     Route::get('/admin/data-penjualan', [AdminController::class, 'penjualan']);
     Route::get('/admin/data-cloth-add', [ClothController::class, 'create']);

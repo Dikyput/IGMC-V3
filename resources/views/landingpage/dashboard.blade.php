@@ -61,11 +61,18 @@
                                 </div>
                             </div>
                             <div class="title-area mb-0">
-                                <h2 class="sec-title text-white custom-anim-top wow animated" data-wow-duration="1.3s"
-                                    data-wow-delay="0.1s">Join The Big Tournaments</h2>
-                                <p class="mt-30 mb-30 custom-anim-top wow animated" data-wow-duration="1.3s"
-                                    data-wow-delay="0.2s">Beyond esports tournaments, include a broader calendar of
-                                    gaming events, conferences, and conventions. and connect with each other.</p>
+                                @foreach ($hh as $hh)
+                                    <h2 class="sec-title text-white custom-anim-top wow animated" data-wow-duration="1.3s"
+                                        data-wow-delay="0.1s">
+                                        {{ $hh->text1 }}
+                                @endforeach
+                                </h2>
+                                @foreach ($hh2 as $hh2)
+                                    <p class="mt-30 mb-30 custom-anim-top wow animated" data-wow-duration="1.3s"
+                                        data-wow-delay="0.2s">
+                                        {{ $hh2->text2 }}
+                                    </p>
+                                @endforeach
                                 <div class="btn-group custom-anim-top wow animated" data-wow-duration="1.3s"
                                     data-wow-delay="0.2s">
                                     <a href="about.html" class="th-btn style-border">
@@ -140,14 +147,21 @@
                                 </div>
                             </div>
                             <div class="title-area mb-0">
-                                <h2 class="sec-title text-white custom-anim-top wow animated" data-wow-duration="1.3s"
-                                    data-wow-delay="0.1s">Join The Big Tournaments</h2>
-                                <p class="mt-30 mb-30 custom-anim-top wow animated" data-wow-duration="1.3s"
-                                    data-wow-delay="0.2s">Beyond esports tournaments, include a broader calendar of
-                                    gaming events, conferences, and conventions. and connect with each other.</p>
+                                @foreach ($hh3 as $hh)
+                                    <h2 class="sec-title text-white custom-anim-top wow animated" data-wow-duration="1.3s"
+                                        data-wow-delay="0.1s">
+                                        {{ $hh->text1 }}
+                                @endforeach
+                                </h2>
+                                @foreach ($hh4 as $hh2)
+                                    <p class="mt-30 mb-30 custom-anim-top wow animated" data-wow-duration="1.3s"
+                                        data-wow-delay="0.2s">
+                                        {{ $hh2->text2 }}
+                                    </p>
+                                @endforeach
                                 <div class="btn-group custom-anim-top wow animated" data-wow-duration="1.3s"
                                     data-wow-delay="0.2s">
-                                    <a href="about.html" class="th-btn style-border">
+                                    <a href="#" class="th-btn style-border">
                                         <span class="btn-border">
                                             JOIN NOW <i class="fa-solid fa-arrow-right ms-2"></i>
                                         </span>
@@ -220,11 +234,18 @@
                                 </div>
                             </div>
                             <div class="title-area mb-0">
-                                <h2 class="sec-title text-white custom-anim-top wow animated" data-wow-duration="1.3s"
-                                    data-wow-delay="0.1s">Join The Big Tournaments</h2>
-                                <p class="mt-30 mb-30 custom-anim-top wow animated" data-wow-duration="1.3s"
-                                    data-wow-delay="0.2s">Beyond esports tournaments, include a broader calendar of
-                                    gaming events, conferences, and conventions. and connect with each other.</p>
+                                @foreach ($hh5 as $hh)
+                                    <h2 class="sec-title text-white custom-anim-top wow animated" data-wow-duration="1.3s"
+                                        data-wow-delay="0.1s">
+                                        {{ $hh->text1 }}
+                                @endforeach
+                                </h2>
+                                @foreach ($hh6 as $hh2)
+                                    <p class="mt-30 mb-30 custom-anim-top wow animated" data-wow-duration="1.3s"
+                                        data-wow-delay="0.2s">
+                                        {{ $hh2->text2 }}
+                                    </p>
+                                @endforeach
                                 <div class="btn-group custom-anim-top wow animated" data-wow-duration="1.3s"
                                     data-wow-delay="0.2s">
                                     <a href="about.html" class="th-btn style-border">
@@ -245,8 +266,8 @@
 
 
     <!--==============================
-                                Marquee Area
-                                ==============================-->
+                                                                                                                                                    Marquee Area
+                                                                                                                                                    ==============================-->
     <div class="marquee-area-1 bg-repeat  overflow-hidden" data-bg-src="assets/img/bg/jiji-bg.png">
         <div class="container-fluid">
             <div class="swiper th-slider" id="marqueeSlider1"
@@ -326,8 +347,10 @@
         <div class="container">
             <div class="title-area text-center custom-anim-top wow animated" data-wow-duration="1.5s"
                 data-wow-delay="0.2s">
-                <span class="sub-title style2"># Point Table</span>
-                <h2 class="sec-title">Game On, Power Up, Win Big <span class="text-theme">!</span></h2>
+                @foreach ($h1 as $h1)
+                    <span class="sub-title style2">{{ $h1->text1 }}</span>
+                    <h2 class="sec-title">{{ $h1->text2 }}<span class="text-theme">!</span></h2>
+                @endforeach
             </div>
 
             <div class="table-responsive">
@@ -421,15 +444,17 @@
     </div>
 
     <!--==============================
-                                Game Area
-                                ==============================-->
+                                                                                                                                                    Game Area
+                                                                                                                                                    ==============================-->
     <section class="overflow-hidden">
         <div class="container th-container2">
             <div class="game-sec-wrap1 space" data-bg-src="assets/img/bg/game-sec1-bg.png">
                 <div class="title-area text-center custom-anim-top wow animated" data-wow-duration="1.5s"
                     data-wow-delay="0.1s">
-                    <span class="sub-title"># Releases The Latest Game</span>
-                    <h2 class="sec-title">Game On, Power Up, Win Big <span class="text-theme">!</span></h2>
+                    @foreach ($h2 as $h2)
+                        <span class="sub-title">{{ $h2->text2 }}</span>
+                        <h2 class="sec-title">{{ $h2->text2 }}<span class="text-theme"></span></h2>
+                    @endforeach
                 </div>
                 <div class="slider-area">
                     <div class="swiper th-slider game-slider-1" id="gameSlider1"
@@ -438,150 +463,26 @@
                             <div class="swiper-slide">
                                 <div class="game-card gradient-border">
                                     <div class="game-card-img">
-                                        <a href="game-details.html">
+                                        <a href="#">
                                             <img src="assets/img/game/1-1.png" alt="game image">
                                         </a>
-                                        <div class="game-logo">
-                                            <img src="assets/img/game/logo1-1.png" alt="game logo">
-                                        </div>
                                     </div>
                                     <div class="game-card-details">
-                                        <h3 class="box-title"><a href="game-details.html">The Hunter Killer</a></h3>
+                                        <h3 class="box-title"><a href="#">The Hunter Killer</a></h3>
                                         <p class="game-content">Entry Fee:<span class="text-theme">$10.00</span></p>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="swiper-slide">
-                                <div class="game-card gradient-border">
-                                    <div class="game-card-img">
-                                        <a href="game-details.html">
-                                            <img src="assets/img/game/1-2.png" alt="game image">
-                                        </a>
-                                        <div class="game-logo">
-                                            <img src="assets/img/game/logo1-2.png" alt="game logo">
-                                        </div>
-                                    </div>
-                                    <div class="game-card-details">
-                                        <h3 class="box-title"><a href="game-details.html">Net Remaining Monies</a>
-                                        </h3>
-                                        <p class="game-content">Entry Fee:<span class="text-theme">Free</span></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="game-card gradient-border">
-                                    <div class="game-card-img">
-                                        <a href="game-details.html">
-                                            <img src="assets/img/game/1-3.png" alt="game image">
-                                        </a>
-                                        <div class="game-logo">
-                                            <img src="assets/img/game/logo1-3.png" alt="game logo">
-                                        </div>
-                                    </div>
-                                    <div class="game-card-details">
-                                        <h3 class="box-title"><a href="game-details.html">Duty Balck Ops</a></h3>
-                                        <p class="game-content">Entry Fee:<span class="text-theme">$10.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="game-card gradient-border">
-                                    <div class="game-card-img">
-                                        <a href="game-details.html">
-                                            <img src="assets/img/game/1-4.png" alt="game image">
-                                        </a>
-                                        <div class="game-logo">
-                                            <img src="assets/img/game/logo1-4.png" alt="game logo">
-                                        </div>
-                                    </div>
-                                    <div class="game-card-details">
-                                        <h3 class="box-title"><a href="game-details.html">League of Legends</a></h3>
-                                        <p class="game-content">Entry Fee:<span class="text-theme">$10.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="game-card gradient-border">
-                                    <div class="game-card-img">
-                                        <a href="game-details.html">
-                                            <img src="assets/img/game/1-1.png" alt="game image">
-                                        </a>
-                                        <div class="game-logo">
-                                            <img src="assets/img/game/logo1-1.png" alt="game logo">
-                                        </div>
-                                    </div>
-                                    <div class="game-card-details">
-                                        <h3 class="box-title"><a href="game-details.html">The Hunter Killer</a></h3>
-                                        <p class="game-content">Entry Fee:<span class="text-theme">$10.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="game-card gradient-border">
-                                    <div class="game-card-img">
-                                        <a href="game-details.html">
-                                            <img src="assets/img/game/1-2.png" alt="game image">
-                                        </a>
-                                        <div class="game-logo">
-                                            <img src="assets/img/game/logo1-2.png" alt="game logo">
-                                        </div>
-                                    </div>
-                                    <div class="game-card-details">
-                                        <h3 class="box-title"><a href="game-details.html">Net Remaining Monies</a>
-                                        </h3>
-                                        <p class="game-content">Entry Fee:<span class="text-theme">Free</span></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="game-card gradient-border">
-                                    <div class="game-card-img">
-                                        <a href="game-details.html">
-                                            <img src="assets/img/game/1-3.png" alt="game image">
-                                        </a>
-                                        <div class="game-logo">
-                                            <img src="assets/img/game/logo1-3.png" alt="game logo">
-                                        </div>
-                                    </div>
-                                    <div class="game-card-details">
-                                        <h3 class="box-title"><a href="game-details.html">Duty Balck Ops</a></h3>
-                                        <p class="game-content">Entry Fee:<span class="text-theme">$10.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="game-card gradient-border">
-                                    <div class="game-card-img">
-                                        <a href="game-details.html">
-                                            <img src="assets/img/game/1-4.png" alt="game image">
-                                        </a>
-                                        <div class="game-logo">
-                                            <img src="assets/img/game/logo1-4.png" alt="game logo">
-                                        </div>
-                                    </div>
-                                    <div class="game-card-details">
-                                        <h3 class="box-title"><a href="game-details.html">League of Legends</a></h3>
-                                        <p class="game-content">Entry Fee:<span class="text-theme">$10.00</span></p>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                         <div class="slider-pagination"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section><!--==============================
-                                Feature Area
-                                ==============================-->
+    </section>
+    <!--==============================
+                                                                                                                                                    Feature Area
+                                                                                                                                                    ==============================-->
 
     <section class="space bg-top-center" data-bg-src="assets/img/bg/tournament-sec1-bg.png">
         <div class="container">
@@ -589,8 +490,10 @@
                 <div class="col-lg-auto">
                     <div class="title-area text-lg-start text-center custom-anim-left wow animated"
                         data-wow-duration="1.5s" data-wow-delay="0.2s">
-                        <span class="sub-title"># Game Streaming Battle </span>
-                        <h2 class="sec-title">Our Gaming Tournaments <span class="text-theme">!</span></h2>
+                        @foreach ($h3 as $h3)
+                            <span class="sub-title">{{ $h3->text1 }} </span>
+                            <h2 class="sec-title">{{ $h3->text2 }}<span class="text-theme">!</span></h2>
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-lg-auto">
@@ -604,89 +507,35 @@
                 </div>
             </div>
             <div class="row gy-4 filter-active">
-                <div class="col-12 filter-item cat1">
-                    <div class="tournament-card gradient-border">
-                        <div class="tournament-card-img">
-                            <img src="assets/img/tournament/1-1.png" alt="tournament image">
-                            <img src="{{ asset('assets/img/tournament/game-vs1.svg') }}" alt="tournament image">
-                            <img src="assets/img/tournament/1-2.png" alt="tournament image">
-                        </div>
-                        <div class="tournament-card-content">
-                            <div class="tournament-card-details">
-                                <div class="tournament-card-meta">
-                                    <span class="tournament-card-tag">Upcoming</span>
-                                    <span class="tournament-card-score gradient-border">0 / 0</span>
-                                </div>
-                                <h3 class="tournament-card-title"><a href="tournament-details.html">Pro Player VS
-                                        Lion King</a></h3>
-                                <p class="tournament-card-date">23 December, 2024 <span class="text-theme">6:00
-                                        PM</span></p>
-                                <div class="th-social">
-                                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i>Youtube</a>
-                                    <a href="tournament-details.html"><i class="fa-brands fa-twitch"></i>Twitch</a>
+                @foreach ($jadwal as $j)
+                    <div class="col-12 filter-item cat1">
+                        <div class="tournament-card gradient-border">
+                            <div class="tournament-card-img">
+                                <img src="{{ asset('assets') }}/tournamen/{{ $j->foto }}" alt="tournament image">
+                            </div>
+                            <div class="tournament-card-content">
+                                <div class="tournament-card-details">
+                                    <div class="tournament-card-meta">
+                                        <span class="tournament-card-tag">{{ $j->status }}</span>
+                                    </div>
+                                    <h3 class="tournament-card-title"><a href="#">{{ $j->name_event }}</a></h3>
+                                    <p class="tournament-card-date">{{ $j->jadwal }} <span
+                                            class="text-theme">{{ $j->pukul }}</span></p>
+                                    <div class="th-social">
+                                        <a href="{{ $j->link_youtube }}" target="_blank"><i
+                                                class="fab fa-youtube"></i>Youtube</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-12 filter-item cat2">
-                    <div class="tournament-card gradient-border">
-                        <div class="tournament-card-img">
-                            <img src="assets/img/tournament/1-3.png" alt="tournament image">
-                            <img src="{{ asset('assets/img/tournament/game-vs1.svg') }}" alt="tournament image">
-                            <img src="assets/img/tournament/1-4.png" alt="tournament image">
-                        </div>
-                        <div class="tournament-card-content">
-                            <div class="tournament-card-details">
-                                <div class="tournament-card-meta">
-                                    <span class="tournament-card-tag">Finished</span>
-                                    <span class="tournament-card-score gradient-border">20 / 22</span>
-                                </div>
-                                <h3 class="tournament-card-title"><a href="tournament-details.html">Assassin King VS
-                                        Cyberpunk</a></h3>
-                                <p class="tournament-card-date">20 December, 2024 <span class="text-theme">6:00
-                                        PM</span></p>
-                                <div class="th-social">
-                                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i>Youtube</a>
-                                    <a href="tournament-details.html"><i class="fa-brands fa-twitch"></i>Twitch</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 filter-item cat1">
-                    <div class="tournament-card gradient-border">
-                        <div class="tournament-card-img">
-                            <img src="{{ asset('assets/img/tournament/1-5.png') }}" alt="tournament image">
-                            <img src="{{ asset('assets/img/tournament/game-vs1.svg') }}" alt="tournament image">
-                            <img src="{{ asset('assets/img/tournament/1-6.png') }}" alt="tournament image">
-                        </div>
-                        <div class="tournament-card-content">
-                            <div class="tournament-card-details">
-                                <div class="tournament-card-meta">
-                                    <span class="tournament-card-tag">Upcoming</span>
-                                    <span class="tournament-card-score gradient-border">0 / 0</span>
-                                </div>
-                                <h3 class="tournament-card-title"><a href="tournament-details.html">Team Gorilla VS
-                                        Badgamer</a></h3>
-                                <p class="tournament-card-date">23 December, 2024 <span class="text-theme">6:00
-                                        PM</span></p>
-                                <div class="th-social">
-                                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i>Youtube</a>
-                                    <a href="tournament-details.html"><i class="fa-brands fa-twitch"></i>Twitch</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
         </div>
-    </section> <!--==============================
-                                Gallery Area
-                                ==============================-->
+    </section>
+    <!--==============================
+                                                                                                                                                    Gallery Area
+                                                                                                                                                    ==============================-->
     <div class="container-fluid p-0">
         <div class="gallery-area-1 overflow-hidden text-center">
             <div class="slider-area gallery-slider1">
@@ -694,8 +543,8 @@
                     data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}},"effect":"coverflow","coverflowEffect":{"rotate":"0","stretch":"0","depth":"150","modifier":"1"},"centeredSlides":"true"}'>
                     <div class="swiper-wrapper">
                         <!--==============================
-                                Gallery Area
-                                ==============================-->
+                                                                                                                                                    Gallery Area
+                                                                                                                                                    ==============================-->
                         <div class="swiper-slide gallery-wrap1">
                             <div class="th-video">
                                 <img src="{{ asset('assets/img/video/1-1.png') }}" alt="img">
@@ -752,9 +601,10 @@
                         class="fas fa-angle-right"></i></button>
             </div>
         </div>
-    </div><!--==============================
-                                Team Area
-                                ==============================-->
+    </div>
+    <!--==============================
+                                                                                                                                                    Team Area
+                                                                                                                                                    ==============================-->
     <section class="team-sec-1 space">
         <div class="team-shape1-1 shape-mockup" data-top="0" data-right="0"><img
                 src="{{ asset('assets/img/bg/team-sec1-bg.png') }}" alt="img"></div>
@@ -772,8 +622,30 @@
                 <div class="swiper th-slider has-shadow" id="teamSlider1"
                     data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"2"},"768":{"slidesPerView":"3"},"992":{"slidesPerView":"4"},"1200":{"slidesPerView":"5"}}}'>
                     <div class="swiper-wrapper">
-
-                        <div class="swiper-slide">
+                        @foreach ($playerigmc as $pigmc)
+                            <div class="swiper-slide">
+                                <div class="th-team team-card">
+                                    <div class="team-card-corner team-card-corner1"></div>
+                                    <div class="team-card-corner team-card-corner2"></div>
+                                    <div class="team-card-corner team-card-corner3"></div>
+                                    <div class="team-card-corner team-card-corner4"></div>
+                                    <h3 class="box-title"><a href="#">{{ $pigmc->name_team }}</a></h3>
+                                    <div class="img-wrap">
+                                        <div class="team-img">
+                                            <img src="{{ asset('assets') }}/playerigmc/{{ $pigmc->foto }}"
+                                                alt="Team">
+                                        </div>
+                                        <img class="game-logo"
+                                            src="{{ asset('assets') }}/playerigmc/{{ $pigmc->logo_team }}"
+                                            alt="Team">
+                                    </div>
+                                    <div class="team-card-content">
+                                        <h3 class="box-title"><a href="#">{{ $pigmc->name }}</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                        {{-- <div class="swiper-slide">
                             <div class="th-team team-card">
                                 <div class="team-card-corner team-card-corner1"></div>
                                 <div class="team-card-corner team-card-corner2"></div>
@@ -791,7 +663,7 @@
                                     <h3 class="box-title"><a href="#"></a></h3>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                     </div>
                 </div>
@@ -803,8 +675,8 @@
         </div>
     </section>
     <!--==============================
-                                Cta Area
-                                ==============================-->
+                                                                                                                                                    Cta Area
+                                                                                                                                                    ==============================-->
     <div class="container th-container4">
         <div class="cta-area-1">
             <div class="cta-bg-shape-border">
@@ -841,7 +713,7 @@
                                     class="text-theme fw-medium">Master Championship Tournament Today !</span></h2>
                             <p class="mt-30 mb-30">We are presenting something new to create a competitive platform
                                 that can be useful for all the teams involved.</p>
-                            <a href="https://discord.gg/GrgJSJB94Y" class="th-btn">JOIN COMMUNITY <i
+                            <a href="https://discord.gg/GrgJSJB94Y" target="_blank" class="th-btn">JOIN COMMUNITY <i
                                     class="fa-solid fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -850,8 +722,8 @@
         </div>
     </div>
     <!--==============================
-                                Product Area
-                                ==============================-->
+                                                                                                                                                    Product Area
+                                                                                                                                                    ==============================-->
     <section class="space">
         <div class="container">
             <div class="row justify-content-between align-items-center" id="crew-sec">
@@ -890,8 +762,6 @@
                                         <div class="team-img">
                                             <img src=" {{ asset('assets') }}/crew/{{ $datacrew->foto }}" alt="Team">
                                         </div>
-                                        <img class="game-logo" src="{{ asset('assets/img/team/game-logo1-1.png') }}"
-                                            alt="Team">
                                     </div>
                                     <div class="team-card-content">
                                         <h5 class="box-title"><a href="#">{{ $datacrew->name }}</a></h5>
@@ -914,8 +784,8 @@
     </section>
 
     <!--==============================
-                                Client Area
-                                ==============================-->
+                                                                                                                                                    Client Area
+                                                                                                                                                    ==============================-->
     <div class="client-area-1 overflow-hidden space">
         <div class="container-fluid p-0">
             <div class="swiper th-slider client-slider1"
