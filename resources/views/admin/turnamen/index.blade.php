@@ -60,7 +60,7 @@
                                         <td class="text-center">{{ $j->jadwal }}</td>
                                         <td class="text-center">{{ $j->pukul }}</td>
                                         <td class=" text-center"><img
-                                                src=" {{ asset('assets') }}/tournamen/{{ $j->foto }}"
+                                                src=" {{ asset('assets') }}/turnamen/{{ $j->foto }}"
                                                 id="file-preview-poster" alt="{{ $j->name }}" width="20%"></td>
                                         <td class="text-center">
                                             <button type="button" data-bs-toggle="modal"

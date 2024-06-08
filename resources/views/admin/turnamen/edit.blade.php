@@ -28,7 +28,7 @@
                             <div class="input-group">
                                 <label class="form-label">Masukkan Status</label>
                                 <select class="form-select" name='status' id="inputGroupSelect01">
-                                    <option selected>Pilih Status</option>
+                                    <option value="{{ $jadwal->status }}" selected>{{ $jadwal->status }}</option>
                                     <option value="Upcoming">Upcoming</option>
                                     <option value="Ongoing">Ongoing</option>
                                     <option value="Finished">Finished</option>

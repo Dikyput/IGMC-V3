@@ -53,17 +53,17 @@
                                         <td class="text-center">{{ $g->nationaly }}</td>
                                         <td class="text-center">
                                             <button type="button" data-bs-toggle="modal"
-                                                data-bs-target="#detail-modal{{ $g->id }}"
+                                                data-bs-target="#detail-modal{{ $g->token_newplayer }}"
                                                 class="btn btn-info font-weight-bold btn--edit text-sm rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="Detail">
                                                 <i class="fa fa-eye"></i>
                                             </button>
-                                            <a href="{{ url('admin/data-player/' . $g->id_discord . '/edit') }}"
+                                            <a href="{{ url('admin/data-player/' . $g->token_newplayer . '/edit') }}"
                                                 class="btn btn-warning font-weight-bold text-sm rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
                                                 <i class="fa fa-edit"></i>
                                             </a>
-                                            <a href="{{ url('admin/data-player/' . $g->id_discord . '/delete') }}"
+                                            <a href="{{ url('admin/data-player/' . $g->token_newplayer . '/delete') }}"
                                                 onclick="return confirm('Anda yakin akan menghapus data ini?')"
                                                 class="btn btn-danger font-weight-bold text-sm rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hapus">
@@ -72,7 +72,7 @@
                                         </td>
                                     </tr>
                                     {{-- modal detail --}}
-                                    <div class="modal fade" id="detail-modal{{ $g->id }}" tabindex="-1"
+                                    <div class="modal fade" id="detail-modal{{ $g->token_newplayer }}" tabindex="-1"
                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog  modal-lg">
                                             <div class="modal-content">
@@ -86,8 +86,19 @@
                                                     <div class="row">
                                                         <div class="col-md-4">
                                                             <div class="foto">
-                                                                <img src="https://cdn.discordapp.com/avatars/{{ $g->id_discord }}/{{ $g->useriddiscord->avatar }}.png"
-                                                                    alt="" width="100%" height="auto">
+                                                                @if ($g->useriddiscord && $g->useriddiscord->avatar === null)
+                                                                    <img src="https://ia800305.us.archive.org/31/items/discordprofilepictures/discordblue.png"
+                                                                        alt="Default Discord Avatar" width="100%"
+                                                                        height="auto">
+                                                                @elseif ($g->useriddiscord && $g->useriddiscord->avatar !== null)
+                                                                    <img src="https://cdn.discordapp.com/avatars/{{ $g->id_discord }}/{{ $g->useriddiscord->avatar }}.png"
+                                                                        alt="User Discord Avatar" width="100%"
+                                                                        height="auto">
+                                                                @else
+                                                                    <img src="https://ia800305.us.archive.org/31/items/discordprofilepictures/discordblue.png"
+                                                                        alt="Default Discord Avatar" width="100%"
+                                                                        height="auto">
+                                                                @endif
                                                             </div>
                                                         </div>
                                                         <div class="col-md-8">

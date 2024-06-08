@@ -19,8 +19,8 @@
                     </div>
                 </div>
                 <div class="card-body px-0 pb-2">
-                    <form action="{{ url('admin/data-player-update/' . $player->id) }}" class="row g-3 py-1 px-4"
-                        method="post" enctype="multipart/form-data">
+                    <form action="{{ url('admin/data-player-update/' . $player->token_newplayer) }}"
+                        class="row g-3 py-1 px-4" method="post" enctype="multipart/form-data">
                         @method('PUT')
                         @csrf
                         <div class="col-md-6">
@@ -48,9 +48,9 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <label for="tempatlahir" class="form-label">Saldo</label>
+                            <label for="saldo" class="form-label">Saldo</label>
                             <div class="input-group">
-                                <input type="text" name="tempatlahir" class="form-control rounded-3" required
+                                <input type="text" name="saldo" class="form-control rounded-3" required
                                     value="{{ $player->SaldoUser->nominal }}">
                             </div>
                         </div>
