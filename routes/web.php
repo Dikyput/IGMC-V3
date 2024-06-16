@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\ClothController;
 use App\Http\Controllers\CrewController;
 use App\Http\Controllers\DashboardController;
@@ -85,13 +86,16 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/topup-saldo', [TransactionController::class, 'submitcart'])->name('submitcart');
         Route::get('/mycart', [TransactionController::class, 'statusPending'])->name('mycart');
         Route::get('updateprofile', function () {return view('dashboard.auth.up');})->name('updateprofile');
-        Route::get('dashboard', function () {return view('dashboard.home');})->name('dashboard');
+        Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
         Route::get('shop', [ShopController::class, 'show'])->name('shop');
         Route::get('storecart/{id}', [ShopController::class, 'storecart']);
         Route::get('cobaitem', [GachaItemController::class, 'cobaitem'])->name('cobaitem');
         Route::get('myinventory', [GachaItemController::class, 'gachaitem'])->name('myinventory');
         Route::post('/add-data-texture', [GachaItemController::class, 'store'])->name('add-data-texture');
         Route::post('/colectitem', [GachaItemController::class, 'store'])->name('colectitem');
+
+        Route::get('/artikel/{slug}', [ArtikelController::class, 'show'])->name('artikelshow');
+        Route::post('/comment/store', [ArtikelController::class, 'store'])->name('comment.store');
     });
 });
 Route::get('keluar', [DashboardController::class, 'keluar'])->name('keluar');

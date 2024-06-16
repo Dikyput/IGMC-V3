@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artikel;
+use App\Models\Category;
 use App\Models\crew;
 use App\Models\JadwalTournamen;
 use App\Models\PlayerIgmc2024;
 use App\Models\UiPage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
 class DashboardController extends Controller
@@ -15,7 +18,14 @@ class DashboardController extends Controller
     public function dashboard()
     {
         if (Auth::check()) {
-            return redirect()->route("dashboard");
+            $artikel = Artikel::latest('updated_at')->paginate(4);
+            $postakhir = Artikel::latest('updated_at')->take(3)->get();
+            $categories = Category::select('categories.id', 'categories.name', DB::raw('COUNT(artikel.id) as artikel_count'))
+                ->leftJoin('artikel', 'categories.id', '=', 'artikel.category_id')
+                ->groupBy('categories.id', 'categories.name')
+                ->orderBy('categories.name')
+                ->get();
+            return view('dashboard.home', compact('artikel', 'categories', 'postakhir'));
         };
     }
 

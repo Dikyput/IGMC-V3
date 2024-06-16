@@ -172,51 +172,37 @@ Mobile Menu
         </div>
         <div class="th-mobile-menu">
             <ul>
-                <li class="menu-item-has-children">
-                    <a href="index.html">HOME</a>
-                    <ul class="sub-menu">
-                        <li><a href="index.html">Home Esports</a></li>
-                        <li><a href="home-2.html">Home Streaming</a></li>
-                        <li><a href="home-3.html">Home Video Gaming</a></li>
-                        <li><a href="home-4.html">Home Tournament</a></li>
-                        <li><a href="home-5.html">Home Gamer</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li class="menu-item-has-children">
-                    <a href="#">TOURNAMENT</a>
-                    <ul class="sub-menu">
-                        <li><a href="tournament.html">Tournament</a></li>
-                        <li><a href="tournament-details.html">Tournament Details</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="#">BLOG</a>
-                    <ul class="sub-menu">
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="blog-details.html">Blog Details</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="#">PAGES</a>
-                    <ul class="sub-menu">
-                        <li class="menu-item-has-children">
-                            <a href="#">Shop</a>
-                            <ul class="sub-menu">
-                                <li><a href="{{ route('shop') }}">Shop</a></li>
-                                <li><a href="{{ route('mycart') }}">My Cart</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="{{ route('myinventory') }}">My Inventory</a></li>
-                        <li><a href="#">Players</a></li>
-                        <li><a href="#">Players Detail</a></li>
-                        <li><a href="#">Ranking</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="contact.html">CONTACT</a>
-                </li>
+                <li><a href="{{ route('show') }}">HOME</a></li>
+                @auth
+                    <li><a href="{{ route('dashboard') }}">DASHBOARD</a></li>
+                @endauth
+                <li><a href="{{ route('about') }}">ABOUT US</a></li>
+                @auth
+                    <li class="menu-item-has-children">
+                        <a href="#">PAGES</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="#">TOURNAMENT</a>
+                                <ul class="sub-menu">
+                                    <li><a href="{{ route('tournament') }}">Tournament</a></li>
+                                    <li><a href="{{ route('tournamentdetails') }}">Tournament Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Shop</a>
+                                <ul class="sub-menu">
+                                    <li><a href="{{ route('shop') }}">Shop</a></li>
+                                    <li><a href="{{ route('mycart') }}">My Cart</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{{ route('myinventory') }}">My Inventory</a></li>
+                            <li><a href="#">Players</a></li>
+                            <li><a href="#">Players Detail</a></li>
+                            <li><a href="#">Ranking</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ route('topup-saldo') }}">TOP-UP SALDO</a></li>
+                @endauth
             </ul>
         </div>
     </div>
@@ -294,18 +280,22 @@ Header Area
                         <nav class="main-menu d-none d-lg-inline-block">
                             <ul>
                                 <li><a href="{{ route('show') }}">HOME</a></li>
+                                @auth
+                                    <li><a href="{{ route('dashboard') }}">DASHBOARD</a></li>
+                                @endauth
                                 <li><a href="{{ route('about') }}">ABOUT US</a></li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">TOURNAMENT</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="{{ route('tournament') }}">Tournament</a></li>
-                                        <li><a href="{{ route('tournamentdetails') }}">Tournament Details</a></li>
-                                    </ul>
-                                </li>
                                 @auth
                                     <li class="menu-item-has-children">
                                         <a href="#">PAGES</a>
                                         <ul class="sub-menu">
+                                            <li class="menu-item-has-children">
+                                                <a href="#">TOURNAMENT</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="{{ route('tournament') }}">Tournament</a></li>
+                                                    <li><a href="{{ route('tournamentdetails') }}">Tournament Details</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
                                             <li class="menu-item-has-children">
                                                 <a href="#">Shop</a>
                                                 <ul class="sub-menu">

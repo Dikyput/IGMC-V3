@@ -207,25 +207,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .cursor-animation {
-  position: fixed;
-  background: var(--theme-color);
-  width: 15px;
-  height: 15px;
-  border-radius: 100%;
-  z-index: 999999;
-  -webkit-transition: 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background, 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
-  transition: 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background, 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
-  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background;
-  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) background, 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transform;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
-  -webkit-transform: translate(2px, 2px);
-      -ms-transform: translate(2px, 2px);
-          transform: translate(2px, 2px);
-  mix-blend-mode: exclusion;
+  
 }
 
 iframe {
@@ -15748,7 +15730,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .th-team .team-desig {
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 500;
   display: block;
   margin-bottom: -0.45em;
@@ -15798,6 +15780,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .team-card {
+  width: 38vh;
   text-align: center;
   border: double 2px transparent;
   border-radius: 10px;
@@ -15881,7 +15864,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .team-card .team-img img {
-  width: 100%;
+  width: 120%;
   border-radius: 10px;
 }
 
